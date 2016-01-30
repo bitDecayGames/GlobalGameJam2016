@@ -38,6 +38,9 @@ jumping = false
 jumpForce = -60
 
 isFacingLeft = false
+isThrowing = false
+
+knifeSpeed = 2
 </string>
           </argument>
         </arguments>
@@ -118,14 +121,15 @@ isFacingLeft = false
             <kind>1</kind>
             <string>phy_speed_x = max(min(phy_speed_x, max_xspeed), -max_xspeed)
 
-if (phy_speed_x &gt; 0.1 || phy_speed_x &lt; -0.1){
-    sprite_index = spr_playerRun_0
-    image_speed = phy_speed_x / 10
-} else {
-    sprite_index = spr_playerStand_0
-    image_speed = 0.1
+if (!isThrowing){
+    if (phy_speed_x &gt; 0.1 || phy_speed_x &lt; -0.1){
+        sprite_index = spr_playerRun_0
+        image_speed = phy_speed_x / 10
+    } else {
+        sprite_index = spr_playerStand_0
+        image_speed = 0.1
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -173,6 +177,7 @@ if (phy_speed_x &gt; 0.1 || phy_speed_x &lt; -0.1){
             <kind>1</kind>
             <string>physics_apply_force(x, y, moveSpeed, -20)
 image_xscale = 1
+isFacingLeft = false
 </string>
           </argument>
         </arguments>
@@ -197,6 +202,99 @@ image_xscale = 1
             <kind>1</kind>
             <string>physics_apply_force(x, y, -moveSpeed, -20)
 image_xscale = -1
+isFacingLeft = true
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (isThrowing){
+    isThrowing = false
+    sprite_index = spr_playerRun_0
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// First jump
+if (place_meeting(x, y+1, obj_physicsBlock)){
+    jumping = true;
+    physics_apply_impulse(x, y, 0, jumpForce);
+    show_debug_message("Jump");
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!isThrowing){
+    var inst;
+    inst = instance_create(x, y, obj_knifeSafe);
+    with(inst){
+        if (other.isFacingLeft){
+            physics_apply_impulse(x, y+1, -other.knifeSpeed, -2)
+        } else {
+            physics_apply_impulse(x, y+1, other.knifeSpeed, -2)
+        }
+    }
+    if (other.isFacingLeft) sprite_index = spr_playerLeftThrow_0
+    else sprite_index = spr_playerRightThrow_0
+    
+    isThrowing = true
+    image_speed = 1
+}
 </string>
           </argument>
         </arguments>
