@@ -35,12 +35,13 @@
     <object>objects\obj_physicsBlock</object>
     <object>objects\obj_physicsRamp</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_knife</object>
+    <object>objects\obj_knifeSafe</object>
+    <object>objects\obj_knifeLethal</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_credits</room>
-    <room>rooms\rm_physicsTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

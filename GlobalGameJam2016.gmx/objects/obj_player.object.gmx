@@ -41,6 +41,22 @@ isFacingLeft = false
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>331</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -183,11 +199,11 @@ if (place_meeting(x, y+1, obj_physicsBlock)){
           <argument>
             <kind>1</kind>
             <string>var inst;
-inst = instance_create(x, y, obj_knife);
+inst = instance_create(x, y, obj_knifeSafe);
 with (inst) {
     var knifeSpeed = 2
     if (other.isFacingLeft) knifeSpeed *= -1 
-    physics_apply_impulse(x, y, knifeSpeed, -2)
+    physics_apply_impulse(x, y+1, knifeSpeed, -2)
 }
 </string>
           </argument>
