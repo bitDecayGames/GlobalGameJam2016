@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>startX = x
+            <string>controlNum = undefined
+
+startX = x
 startY = y
 
 phy_fixed_rotation = true
@@ -35,7 +37,6 @@ max_xspeed = 2
 jumping = false
 jumpForce = -60
 
-controlNum = undefined
 isFacingLeft = false
 </string>
           </argument>
@@ -79,23 +80,23 @@ isFacingLeft = false
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
