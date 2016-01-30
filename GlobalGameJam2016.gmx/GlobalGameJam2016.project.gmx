@@ -342,7 +342,6 @@
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
     </rooms>
-    <room>rooms\rm_menu</room>
     <rooms name="udphp_demo">
       <room>rooms\udphhtme_lobby</room>
     </rooms>
