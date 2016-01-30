@@ -38,7 +38,6 @@
     <object>objects\obj_player</object>
     <object>objects\obj_controllerDetector</object>
     <object>objects\obj_controllerListener</object>
-    <object>objects\object5</object>
     <object>objects\obj_knifeSafe</object>
     <object>objects\obj_knifeLethal</object>
   </objects>
