@@ -333,7 +333,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
-    <room>rooms\rm_menu</room>
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_credits</room>
@@ -344,8 +343,6 @@
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
     </rooms>
-    <room>rooms\rm_menu</room>
-    <room>rooms\rm_credits</room>
     <rooms name="udphp_demo">
       <room>rooms\udphhtme_lobby</room>
     </rooms>

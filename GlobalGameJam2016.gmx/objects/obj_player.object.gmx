@@ -68,10 +68,13 @@ killedFromLeft = false
             <string>var inst;
 inst = instance_create(x, y, obj_playerDead);
 with(inst){
-    if (other.isFacingLeft){
-        physics_apply_impulse(x, y+1, -5, -2)
+    inst.killedFromLeft = other.killedFromLeft;
+    inst.isFacingLeft = other.isFacingLeft;
+    show_debug_message("killed: " + string(other.killedFromLeft) + " " + string(other.isFacingLeft))
+    if (other.killedFromLeft){
+        physics_apply_impulse(x, y, -30, -40)
     } else {
-        physics_apply_impulse(x, y+1, 5, -2)
+        physics_apply_impulse(x, y, 30, -40)
     }
 }
 
@@ -301,7 +304,6 @@ isFacingLeft = true
 if (place_meeting(x, y+1, obj_physicsBlock)){
     jumping = true;
     physics_apply_impulse(x, y, 0, jumpForce);
-    show_debug_message("Jump");
 }
 </string>
           </argument>
@@ -330,9 +332,10 @@ if (place_meeting(x, y+1, obj_physicsBlock)){
     inst = instance_create(x, y, obj_knifeSafe);
     with(inst){
         if (other.isFacingLeft){
-            physics_apply_impulse(x, y+1, -other.knifeSpeed, -2)
+            physics_apply_impulse(x, y-4, -other.knifeSpeed, -2)
+            image_xscale = -1
         } else {
-            physics_apply_impulse(x, y+1, other.knifeSpeed, -2)
+            physics_apply_impulse(x, y-4, other.knifeSpeed, -2)
         }
     }
     if (other.isFacingLeft) sprite_index = spr_playerLeftThrow_0
