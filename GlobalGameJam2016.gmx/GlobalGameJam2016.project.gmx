@@ -61,6 +61,11 @@
       <sprite>sprites\htme_spr_door</sprite>
       <sprite>sprites\htme_logo</sprite>
     </sprites>
+    <sprites name="player">
+      <sprite>sprites\spr_playerRun_0</sprite>
+      <sprite>sprites\spr_playerThrow_0</sprite>
+      <sprite>sprites\spr_playerStand_0</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -306,9 +311,6 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_physicsTest</room>
-    <room>rooms\rm_menu</room>
-    <room>rooms\rm_credits</room>
     <rooms name="htme_demo">
       <room>rooms\htme_rom_menu</room>
       <room>rooms\htme_rom_connecting</room>
@@ -316,6 +318,9 @@
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
     </rooms>
+    <room>rooms\rm_physicsTest</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_credits</room>
     <rooms name="udphp_demo">
       <room>rooms\udphhtme_lobby</room>
     </rooms>
