@@ -9,6 +9,7 @@
     <sprite>sprites\spr_physicsBlock</sprite>
     <sprite>sprites\spr_physicsRamp</sprite>
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_knife</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -16,6 +17,7 @@
     <object>objects\obj_physicsBlock</object>
     <object>objects\obj_physicsRamp</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_knife</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_physicsTest</room>

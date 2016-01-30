@@ -34,6 +34,8 @@ moveSpeed = 200
 max_xspeed = 2
 jumping = false
 jumpForce = -60
+
+isFacingLeft = false
 </string>
           </argument>
         </arguments>
@@ -103,6 +105,8 @@ jumpForce = -60
           <argument>
             <kind>1</kind>
             <string>physics_apply_force(x, y, moveSpeed, -20)
+
+isFacingLeft = false
 </string>
           </argument>
         </arguments>
@@ -126,6 +130,8 @@ jumpForce = -60
           <argument>
             <kind>1</kind>
             <string>physics_apply_force(x, y, -moveSpeed, -20)
+
+isFacingLeft = true
 </string>
           </argument>
         </arguments>
@@ -153,6 +159,35 @@ if (place_meeting(x, y+1, obj_physicsBlock)){
     jumping = true;
     physics_apply_impulse(x, y, 0, jumpForce);
     show_debug_message("Jump");
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var inst;
+inst = instance_create(x, y, obj_knife);
+with (inst) {
+    var knifeSpeed = 2
+    if (other.isFacingLeft) knifeSpeed *= -1 
+    physics_apply_impulse(x, y, knifeSpeed, -2)
 }
 </string>
           </argument>
