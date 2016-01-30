@@ -66,6 +66,13 @@
       <sprite>sprites\spr_playerLeftThrow_0</sprite>
       <sprite>sprites\spr_playerRightThrow_0</sprite>
       <sprite>sprites\spr_playerStand_0</sprite>
+      <sprite>sprites\spr_playerJumpUp_0</sprite>
+      <sprite>sprites\spr_playerJumpApex_0</sprite>
+      <sprite>sprites\spr_playerJumpDown_0</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_0</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_0</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_0</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_0</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -272,6 +279,7 @@
     </scripts>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_playerDead</object>
     <objects name="main_menu">
       <object>objects\obj_start</object>
       <object>objects\obj_credits</object>
