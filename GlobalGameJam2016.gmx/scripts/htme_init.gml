@@ -121,8 +121,8 @@ self.use_udphp = true;
  * Use 95.85.63.183 if you have no server. It is only for debugging!
  * @type string
  */
-// AWS Windows VM
-self.udphp_master_ip = "52.27.11.210";
+// AWS Punch Server
+self.udphp_master_ip = "52.35.63.72";
 
 /** 
  * WHEN USING GMnet PUNCH:
