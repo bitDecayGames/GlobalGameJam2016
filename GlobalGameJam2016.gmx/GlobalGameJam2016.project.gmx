@@ -12,13 +12,19 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\src_controllerRegisterer.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_physicsBlock</object>
     <object>objects\obj_physicsRamp</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_controllerDetector</object>
+    <object>objects\obj_controllerListener</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_physicsTest</room>
+    <room>rooms\room_controller</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

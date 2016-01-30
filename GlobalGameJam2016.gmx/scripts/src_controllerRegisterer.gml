@@ -16,3 +16,4 @@ case "gamepad lost":                           // Gamepad has been removed or ot
     var pad = async_load[? "pad_index"];       // Get the pad index
     break;
 }
+
