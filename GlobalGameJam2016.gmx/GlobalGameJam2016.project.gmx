@@ -44,7 +44,9 @@
   <NewExtensions>
     <extension index="0">extensions\Multiplayer - GMnet ENGINE</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_introMusic</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="main_menu">
       <sprite>sprites\spr_start</sprite>
@@ -77,8 +79,13 @@
       <sprite>sprites\spr_playerDeathFrontFall_0</sprite>
       <sprite>sprites\spr_playerDeathFrontStop_0</sprite>
     </sprites>
+    <sprites name="splash">
+      <sprite>sprites\spr_bitdecaysplash</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script_centerX.gml</script>
@@ -338,12 +345,17 @@
     <objects name="udphp_demo">
       <object>objects\obj_udphphtme_lobby</object>
     </objects>
+    <object>objects\obj_bitdecaysplash</object>
     <objects name="networking">
       <object>objects\obj_connecting</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
+    <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_connecting</room>
     <room>rooms\rm_physicsTest</room>
