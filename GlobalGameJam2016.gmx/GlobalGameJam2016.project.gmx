@@ -294,6 +294,11 @@
     </scripts>
     <scripts name="main_menu">
       <script>scripts\src_mainMenu.gml</script>
+      <script>scripts\src_startServer.gml</script>
+      <script>scripts\src_startClient.gml</script>
+    </scripts>
+    <scripts name="networking">
+      <script>scripts\src_connecting.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -341,6 +346,9 @@
       <object>objects\obj_udphphtme_lobby</object>
     </objects>
     <object>objects\obj_bitdecaysplash</object>
+    <objects name="networking">
+      <object>objects\obj_connecting</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
@@ -349,6 +357,7 @@
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_connecting</room>
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
     <rooms name="htme_demo">
