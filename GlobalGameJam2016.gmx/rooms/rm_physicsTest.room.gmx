@@ -69,7 +69,7 @@
     <instance objName="obj_physicsBlock" x="704" y="160" name="inst_7CA13901" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_physicsBlock" x="640" y="224" name="inst_1E5B0D7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="160" y="448" name="inst_6D82BFB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controllerDetector" x="-64" y="-64" name="inst_A061E68F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="-64" y="-64" name="inst_A061E68F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
