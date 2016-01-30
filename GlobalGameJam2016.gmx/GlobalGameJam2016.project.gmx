@@ -55,6 +55,7 @@
     <sprite>sprites\spr_physicsRamp</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_knife</sprite>
+    <sprite>sprites\spr_spawnPoint</sprite>
     <sprites name="htme_demo">
       <sprite>sprites\htme_spr_wall</sprite>
       <sprite>sprites\htme_spr_player</sprite>
@@ -81,6 +82,8 @@
     <script>scripts\script_centerX.gml</script>
     <script>scripts\src_controllerRegisterer.gml</script>
     <script>scripts\src_playerControl.gml</script>
+    <script>scripts\scr_createPlayer.gml</script>
+    <script>scripts\src_initializeGlobals.gml</script>
     <scripts name="udphp">
       <scripts name="server">
         <script>scripts\udphp_createServer.gml</script>
@@ -277,17 +280,24 @@
     <scripts name="htme_demo">
       <script>scripts\totro.gml</script>
     </scripts>
+    <scripts name="credits">
+      <script>scripts\src_credits.gml</script>
+    </scripts>
+    <scripts name="main_menu">
+      <script>scripts\src_mainMenu.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_playerDead</object>
     <objects name="main_menu">
+      <object>objects\obj_control_main_menu</object>
       <object>objects\obj_start</object>
       <object>objects\obj_credits</object>
       <object>objects\obj_control_main_menu</object>
     </objects>
     <objects name="credits">
       <object>objects\obj_control_credits</object>
-      <object>objects\obj_back</object>
+      <object>objects\obj_button_credits</object>
     </objects>
     <object>objects\obj_physicsBlock</object>
     <object>objects\obj_physicsRamp</object>
@@ -296,6 +306,8 @@
     <object>objects\obj_controllerListener</object>
     <object>objects\obj_knifeSafe</object>
     <object>objects\obj_knifeLethal</object>
+    <object>objects\obj_spawnPoint</object>
+    <object>objects\obj_initializeGlobals</object>
     <objects name="htme_demo">
       <objects name="menu">
         <object>objects\htme_obj_waitforclient</object>
@@ -320,7 +332,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_initRoom</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_physicsTest</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_credits</room>
     <rooms name="htme_demo">
       <room>rooms\htme_rom_menu</room>
       <room>rooms\htme_rom_connecting</room>
