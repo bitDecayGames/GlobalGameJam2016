@@ -277,7 +277,8 @@
     <object>objects\obj_physicsBlock</object>
     <object>objects\obj_physicsRamp</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_knife</object>
+    <object>objects\obj_knifeSafe</object>
+    <object>objects\obj_knifeLethal</object>
     <objects name="htme_demo">
       <objects name="menu">
         <object>objects\htme_obj_waitforclient</object>
@@ -302,6 +303,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_physicsTest</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_credits</room>
     <rooms name="htme_demo">
       <room>rooms\htme_rom_menu</room>
       <room>rooms\htme_rom_connecting</room>
@@ -309,9 +313,6 @@
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
     </rooms>
-    <room>rooms\rm_physicsTest</room>
-    <room>rooms\rm_menu</room>
-    <room>rooms\rm_credits</room>
     <rooms name="udphp_demo">
       <room>rooms\udphhtme_lobby</room>
     </rooms>
