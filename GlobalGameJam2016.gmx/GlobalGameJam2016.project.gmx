@@ -21,6 +21,7 @@
   <scripts name="scripts">
     <script>scripts\script_centerX.gml</script>
     <script>scripts\src_controllerRegisterer.gml</script>
+    <script>scripts\src_playerControl.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -35,6 +36,8 @@
     <object>objects\obj_physicsBlock</object>
     <object>objects\obj_physicsRamp</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_controllerDetector</object>
+    <object>objects\obj_controllerListener</object>
     <object>objects\obj_knifeSafe</object>
     <object>objects\obj_knifeLethal</object>
   </objects>
