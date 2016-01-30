@@ -75,7 +75,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var inst = instance_create(x, y, obj_knifeLethal)
+            <string>var inst = instance_create(x, y, obj_knifeLethal);
 inst.phy_speed_x = phy_speed_x
 inst.phy_speed_y = phy_speed_y
 inst.phy_rotation = phy_rotation
