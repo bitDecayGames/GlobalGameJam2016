@@ -287,6 +287,11 @@
     </scripts>
     <scripts name="main_menu">
       <script>scripts\src_mainMenu.gml</script>
+      <script>scripts\src_startServer.gml</script>
+      <script>scripts\src_startClient.gml</script>
+    </scripts>
+    <scripts name="networking">
+      <script>scripts\src_connecting.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -333,10 +338,14 @@
     <objects name="udphp_demo">
       <object>objects\obj_udphphtme_lobby</object>
     </objects>
+    <objects name="networking">
+      <object>objects\obj_connecting</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_connecting</room>
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
     <rooms name="htme_demo">
