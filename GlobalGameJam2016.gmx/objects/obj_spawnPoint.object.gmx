@@ -32,9 +32,9 @@ show_debug_message("Spawn searching for pad")
 var count
 count = 0
 for(i=ds_map_find_first(global.availablePads); count&lt;ds_map_size(global.availablePads); i=ds_map_find_next(global.availablePads,i)) {
-    show_message(i)
+    show_debug_message(i)
     if (global.claimedPads[? i] == false) {
-        show_debug_message("Claiming pad " + i)
+        show_debug_message("Claiming pad" + string(i))
         spawnControlPad = i             // set our pad
         global.claimedPads[? i] = true  // let the world know it is ours
     }
