@@ -62,6 +62,19 @@
       <sprite>sprites\htme_spr_door</sprite>
       <sprite>sprites\htme_logo</sprite>
     </sprites>
+    <sprites name="player">
+      <sprite>sprites\spr_playerRun_0</sprite>
+      <sprite>sprites\spr_playerLeftThrow_0</sprite>
+      <sprite>sprites\spr_playerRightThrow_0</sprite>
+      <sprite>sprites\spr_playerStand_0</sprite>
+      <sprite>sprites\spr_playerJumpUp_0</sprite>
+      <sprite>sprites\spr_playerJumpApex_0</sprite>
+      <sprite>sprites\spr_playerJumpDown_0</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_0</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_0</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_0</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_0</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -275,10 +288,12 @@
     </scripts>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_playerDead</object>
     <objects name="main_menu">
       <object>objects\obj_control_main_menu</object>
       <object>objects\obj_start</object>
       <object>objects\obj_credits</object>
+      <object>objects\obj_control_main_menu</object>
     </objects>
     <objects name="credits">
       <object>objects\obj_control_credits</object>
@@ -320,6 +335,7 @@
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_physicsTest</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_credits</room>
     <rooms name="htme_demo">
       <room>rooms\htme_rom_menu</room>
@@ -328,6 +344,8 @@
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
     </rooms>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_credits</room>
     <rooms name="udphp_demo">
       <room>rooms\udphhtme_lobby</room>
     </rooms>
