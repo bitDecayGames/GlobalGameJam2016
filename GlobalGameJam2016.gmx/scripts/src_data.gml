@@ -5,6 +5,8 @@
 * - get
 * - set
 * - increment
+* 
+* Returns: Varies by operation.
 */
 
 var TAG = "src_data";
