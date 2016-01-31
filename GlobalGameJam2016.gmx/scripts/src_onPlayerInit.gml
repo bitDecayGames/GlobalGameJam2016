@@ -16,3 +16,5 @@ isThrowing = false
 knifeSpeed = 3.2
 
 killedFromLeft = false
+
+hasControl = true
