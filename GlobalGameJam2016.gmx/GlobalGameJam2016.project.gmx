@@ -316,6 +316,7 @@
     </rooms>
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
+      <room>rooms\rm_level_3</room>
       <room>rooms\rm_level_2</room>
       <room>rooms\rm_level_4</room>
     </rooms>
