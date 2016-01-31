@@ -98,6 +98,7 @@
       <object>objects\obj_player_1</object>
       <object>objects\obj_playerDead_0</object>
       <object>objects\obj_playerDead_1</object>
+      <object>objects\obj_knifeDead</object>
     </objects>
     <objects name="system">
       <object>objects\obj_controllerListener</object>
