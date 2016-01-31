@@ -40,6 +40,9 @@
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
       <sprite>sprites\spr_ggjsplash</sprite>
+      <sprite>sprites\spr_story_0</sprite>
+      <sprite>sprites\spr_story_1</sprite>
+      <sprite>sprites\spr_story_2</sprite>
     </sprites>
     <sprites name="egg">
       <sprite>sprites\spr_egg</sprite>
@@ -116,6 +119,9 @@
     <background>background\tiles_stone</background>
     <background>background\tiles_decoration_0</background>
     <background>background\tiles_stone_back</background>
+    <background>background\bk_story_0</background>
+    <background>background\bk_story_1</background>
+    <background>background\bk_story_2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
