@@ -287,7 +287,6 @@
     </objects>
     <object>objects\obj_gotoLevelSelectBtn</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_splash</room>
