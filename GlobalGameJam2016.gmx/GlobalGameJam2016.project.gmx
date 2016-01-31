@@ -55,6 +55,9 @@
       <sprite>sprites\spr_playerDanceThriller_1</sprite>
       <sprite>sprites\spr_playerDanceWorm_1</sprite>
     </sprites>
+    <sprites name="level_select">
+      <sprite>sprites\spr_level_select_btn</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -77,6 +80,9 @@
       <script>scripts\src_throw.gml</script>
       <script>scripts\src_move.gml</script>
       <script>scripts\src_jump.gml</script>
+    </scripts>
+    <scripts name="level_select">
+      <script>scripts\src_random_level.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -107,6 +113,11 @@
       <object>objects\obj_physicsRamp</object>
       <object>objects\obj_controllerDetector</object>
     </objects>
+    <objects name="level_select">
+      <object>objects\obj_level_select_btn</object>
+      <object>objects\obj_level_1_btn</object>
+      <object>objects\obj_back_btn</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
@@ -117,6 +128,12 @@
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_splash</room>
+    <rooms name="level_select">
+      <room>rooms\rm_levelSelect</room>
+    </rooms>
+    <rooms name="levels">
+      <room>rooms\rm_level_1</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
