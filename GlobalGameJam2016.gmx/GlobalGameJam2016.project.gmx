@@ -38,6 +38,7 @@
     <sprite>sprites\spr_excalibur</sprite>
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
+      <sprite>sprites\spr_ggjsplash</sprite>
     </sprites>
     <sprites name="player_1">
       <sprite>sprites\spr_playerRun_1</sprite>
@@ -113,28 +114,33 @@
       <object>objects\obj_physicsBlock</object>
       <object>objects\obj_physicsRamp</object>
       <object>objects\obj_controllerDetector</object>
+      <object>objects\obj_roomskipper</object>
     </objects>
     <objects name="level_select">
       <object>objects\obj_level_select_btn</object>
       <object>objects\obj_level_1_btn</object>
       <object>objects\obj_back_btn</object>
     </objects>
+    <objects name="splash">
+      <object>objects\obj_bitdecaysplash</object>
+      <object>objects\obj_ggjsplash</object>
+      <object>objects\obj_splashimg</object>
+    </objects>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\timeline0</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
+    <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
-    <room>rooms\rm_splash</room>
     <rooms name="level_select">
       <room>rooms\rm_levelSelect</room>
     </rooms>
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
     </rooms>
+    <room>rooms\rm_</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
