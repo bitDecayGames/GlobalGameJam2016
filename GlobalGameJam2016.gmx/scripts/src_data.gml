@@ -15,9 +15,7 @@ src_log(TAG + ": Enter");
 // src_log("Arguments: " + json_encode(argument));
 
 var returnVal = undefined;
-// TODO Fix
-//var playerNum = argument[0];
-var playerNum = 0;
+var playerNum = argument[0];
 var key = argument[1];
 var op = argument[2];
 var value = argument[3];

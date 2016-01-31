@@ -3,6 +3,12 @@ if (hasControl){
     if (!isThrowing){
         var inst;
         inst = instance_create(x, y, obj_knifeSafe);
+        
+        var thisControlNum = controlNum;
+        // Set the player that created the knife.
+        with (inst) {
+            playerNum = thisControlNum;
+        }
 
         with(inst){
             if (other.isFacingLeft){
@@ -18,8 +24,8 @@ if (hasControl){
         isThrowing = true;
         image_speed = 0.1;
 
-    	// Increment knife counter.
-    	src_increment(controlNum, global.NUM_KNIVES_THROWN, 1);
+        // Increment knife counter.
+        src_increment(controlNum, global.NUM_KNIVES_THROWN, 1);
     }
 } else {
     src_dance(1);

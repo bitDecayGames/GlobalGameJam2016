@@ -78,6 +78,9 @@ playerDanceThriller = spr_playerDanceThriller_0
 playerDanceWorm = spr_playerDanceWorm_0
 
 playerDead = obj_playerDead_0
+
+// Setup controller number (for keyboard only)
+controlNum = 0;
 </string>
           </argument>
         </arguments>

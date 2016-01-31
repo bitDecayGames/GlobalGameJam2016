@@ -142,6 +142,7 @@
       <script>scripts\src_set.gml</script>
       <script>scripts\src_get.gml</script>
       <script>scripts\src_increment.gml</script>
+      <script>scripts\src_init.gml</script>
     </scripts>
     <scripts name="log">
       <script>scripts\src_log.gml</script>
@@ -153,6 +154,9 @@
     <script>scripts\src_streamHeart.gml</script>
     <script>scripts\src_streamHeartsNow.gml</script>
     <script>scripts\src_fadeOut.gml</script>
+    <scripts name="score_screen">
+      <script>scripts\src_draw_scores.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -227,10 +231,10 @@
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
     </rooms>
-    <room>rooms\rm_</room>
     <rooms name="score_screen">
       <room>rooms\rm_score_screen</room>
     </rooms>
+    <room>rooms\rm_</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
