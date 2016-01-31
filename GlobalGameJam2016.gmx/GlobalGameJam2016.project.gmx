@@ -134,7 +134,6 @@
     <scripts name="level_select">
       <script>scripts\src_random_level.gml</script>
     </scripts>
-    <script>scripts\src_playerOnStep.gml</script>
     <scripts name="data">
       <script>scripts\src_data.gml</script>
       <script>scripts\src_set.gml</script>
