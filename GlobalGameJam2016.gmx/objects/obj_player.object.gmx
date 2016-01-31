@@ -37,7 +37,13 @@ with(inst){
         physics_apply_impulse(x, y, 30, -40)
     }
 }
-
+show_debug_message("Setting alarm0 to 60 for spawner " + string(spawner))
+with (spawner) {
+    if (alarm[0] == -1) {
+        show_debug_message("Alarm set to -1")
+        alarm[0] = 200
+    }
+}
 </string>
           </argument>
         </arguments>

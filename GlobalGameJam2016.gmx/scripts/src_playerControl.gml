@@ -22,18 +22,14 @@ if gamepad_button_check(controlNum, gp_padd) {
 }
 
 if gamepad_button_check(controlNum, gp_padl) {
-    show_debug_message("move left pad")
     src_move(true)
 } else if (gamepad_axis_value(controlNum, gp_axislh) < -threshold) {
-    show_debug_message("move left stick")
     src_move(true)
 }
 
 if gamepad_button_check(controlNum, gp_padr) {
-    show_debug_message("move right pad")
     src_move(false)
 } else if (gamepad_axis_value(controlNum, gp_axislh) > threshold) {
-    show_debug_message("move right stick")
     src_move(false)
 }
 
