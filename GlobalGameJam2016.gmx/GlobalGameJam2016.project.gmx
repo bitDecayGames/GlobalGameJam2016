@@ -44,6 +44,9 @@
       <sprite>sprites\spr_story_0</sprite>
       <sprite>sprites\spr_story_1</sprite>
       <sprite>sprites\spr_story_2</sprite>
+      <sprite>sprites\spr_story_text_0</sprite>
+      <sprite>sprites\spr_story_text_1</sprite>
+      <sprite>sprites\spr_story_text_2</sprite>
     </sprites>
     <sprites name="egg">
       <sprite>sprites\spr_egg</sprite>
@@ -256,6 +259,9 @@
       <object>objects\obj_story1</object>
       <object>objects\obj_story2</object>
       <object>objects\obj_story3</object>
+      <object>objects\obj_storyText1</object>
+      <object>objects\obj_storyText2</object>
+      <object>objects\obj_storyText3</object>
     </objects>
     <objects name="score_screen">
       <object>objects\obj_score_screen</object>
@@ -287,7 +293,6 @@
     </objects>
     <object>objects\obj_gotoLevelSelectBtn</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_splash</room>
