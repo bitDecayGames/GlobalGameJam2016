@@ -302,9 +302,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
-    <rooms name="score_screen">
-      <room>rooms\rm_score_screen</room>
-    </rooms>
     <room>rooms\rm_splash</room>
     <room>rooms\rm_story</room>
     <room>rooms\rm_menu</room>
@@ -315,6 +312,9 @@
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
       <room>rooms\rm_level_2</room>
+    </rooms>
+    <rooms name="score_screen">
+      <room>rooms\rm_score_screen</room>
     </rooms>
     <room>rooms\rm_controlScreen</room>
   </rooms>

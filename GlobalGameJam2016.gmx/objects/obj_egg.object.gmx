@@ -231,7 +231,7 @@ if (self.my_dancer){
                 
                 // Play sound if image index changes
                 var newIndex = maxHealth - ceil(health);
-                if (newIndex != imageIndex) {
+                if (newIndex != image_index) {
                     image_index = newIndex;
                     audio_play_sound(choose(snd_egg_crack_1, snd_egg_crack_2, snd_egg_crack_3), 10, false);
                 }
