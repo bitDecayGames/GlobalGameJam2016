@@ -32,9 +32,12 @@
       <sprite>sprites\spr_playerDeathFrontFall_0</sprite>
       <sprite>sprites\spr_playerDeathFrontStop_0</sprite>
     </sprites>
-    <sprite>sprites\spr_excalibur</sprite>
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
+    </sprites>
+    <sprites name="egg">
+      <sprite>sprites\spr_egg</sprite>
+      <sprite>sprites\spr_shell</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -74,8 +77,11 @@
     <object>objects\obj_knifeLethal</object>
     <object>objects\obj_spawnPoint</object>
     <object>objects\obj_initializeGlobals</object>
-    <object>objects\obj_excalibur</object>
     <object>objects\obj_bitdecaysplash</object>
+    <objects name="egg">
+      <object>objects\obj_shell</object>
+      <object>objects\obj_egg</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
