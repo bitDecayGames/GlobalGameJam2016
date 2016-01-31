@@ -82,6 +82,7 @@
     <instance objName="obj_spawnPoint" x="0" y="64" name="inst_0897628F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_physicsBlock" x="0" y="-192" name="inst_CF5B8AE5" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_egg" x="384" y="194" name="inst_0B7A1D34" locked="0" code="" scaleX="1.56666672229767" scaleY="2.09999990463257" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_0" x="288" y="224" name="inst_55C6F817" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

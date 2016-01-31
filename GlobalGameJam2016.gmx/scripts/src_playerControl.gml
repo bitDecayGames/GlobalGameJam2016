@@ -48,6 +48,9 @@ if gamepad_button_check_pressed(controlNum, gp_face1) {
 }
 if gamepad_button_check_pressed(controlNum, gp_face2) {
     show_debug_message("B button pressed")
+    if (!hasControl && dancing == -1){
+        src_dance(3);
+    }
 }
 if gamepad_button_check_pressed(controlNum, gp_face3) {
     src_throw(verticalModifier)
@@ -57,5 +60,8 @@ if gamepad_button_check_pressed(controlNum, gp_face3) {
 }
 if gamepad_button_check_pressed(controlNum, gp_face4) {
     show_debug_message("Y button pressed")
+    if (!hasControl && dancing == -1){
+        src_dance(2);
+    }
 }
 

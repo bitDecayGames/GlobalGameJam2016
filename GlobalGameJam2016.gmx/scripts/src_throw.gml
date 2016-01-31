@@ -18,4 +18,6 @@ if (hasControl){
         isThrowing = true
         image_speed = 0.1
     }
+} else {
+    src_dance(1);
 }

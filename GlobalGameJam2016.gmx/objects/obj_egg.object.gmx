@@ -159,7 +159,7 @@ physics_apply_impulse(406, 118, 310, -300)
     if(my_dancer != undefined){
         if(instance_place(x, y, obj_player) == my_dancer){
             if(!ritual_happening){
-            random_dance_ritual = ceil(random(current_time) % 3)
+                random_dance_ritual = ceil(random(current_time) % 3)
             
                 if(random_dance_ritual == 1){
                     show_debug_message("Dance with Q")
@@ -170,7 +170,7 @@ physics_apply_impulse(406, 118, 310, -300)
                 else if (random_dance_ritual == 3){
                     show_debug_message("Dance with E")
                 }
-            ritual_happening = true
+                ritual_happening = true
             }
             
             if(random_dance_ritual == 1){
@@ -240,6 +240,8 @@ else {
             <kind>1</kind>
             <string>show_debug_message("collision with player detected")
 self.my_dancer = instance_place(x, y, obj_player)
+
+self.my_dancer.hasControl = false
 </string>
           </argument>
         </arguments>
