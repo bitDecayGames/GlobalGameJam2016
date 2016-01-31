@@ -21,4 +21,6 @@ if (hasControl){
     	// Increment knife counter.
     	src_increment(controlNum, global.NUM_KNIVES_THROWN, 1);
     }
+} else {
+    src_dance(1);
 }

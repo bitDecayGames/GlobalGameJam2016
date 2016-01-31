@@ -4,4 +4,6 @@ if (hasControl){
         jumping = true;
         physics_apply_impulse(x, y, 0, jumpForce);
     }
+} else {
+    // COULD break them out of the dance here... maybe
 }

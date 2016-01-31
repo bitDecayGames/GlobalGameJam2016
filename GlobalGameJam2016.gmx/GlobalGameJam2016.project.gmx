@@ -46,6 +46,9 @@
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_eggBlood1</sprite>
       <sprite>sprites\spr_eggBlood2</sprite>
+      <sprite>sprites\spr_danceTwerk</sprite>
+      <sprite>sprites\spr_danceThriller</sprite>
+      <sprite>sprites\spr_danceWorm</sprite>
     </sprites>
     <sprites name="player_1">
       <sprite>sprites\spr_playerRun_1</sprite>
@@ -111,7 +114,9 @@
     <script>scripts\src_controllerRegisterer.gml</script>
     <script>scripts\src_playerControl.gml</script>
     <script>scripts\src_playerKeyboard.gml</script>
+    <script>scripts\src_createHints.gml</script>
     <script>scripts\scr_createPlayer.gml</script>
+    <script>scripts\src_playerOnStep.gml</script>
     <script>scripts\src_onPlayerInit.gml</script>
     <script>scripts\src_initializeGlobals.gml</script>
     <scripts name="credits">
@@ -124,6 +129,7 @@
       <script>scripts\src_throw.gml</script>
       <script>scripts\src_move.gml</script>
       <script>scripts\src_jump.gml</script>
+      <script>scripts\src_dance.gml</script>
     </scripts>
     <scripts name="level_select">
       <script>scripts\src_random_level.gml</script>
@@ -154,6 +160,7 @@
       <object>objects\obj_egg</object>
       <object>objects\obj_eggBlood1</object>
       <object>objects\obj_eggBlood2</object>
+      <object>objects\obj_danceHint</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
