@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-phy_fixed_rotation = true
+            <string>phy_fixed_rotation = true
+
+audio_play_sound(choose(snd_death_1, snd_death_2, snd_death_3), 10, false);
 </string>
           </argument>
         </arguments>

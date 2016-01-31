@@ -50,6 +50,8 @@
           <argument>
             <kind>1</kind>
             <string>playerNum = -1
+
+audio_play_sound(choose(snd_knife_throw), 10, false);
 </string>
           </argument>
         </arguments>
