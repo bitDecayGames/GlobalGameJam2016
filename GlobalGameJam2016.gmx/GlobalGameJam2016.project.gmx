@@ -13,6 +13,7 @@
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_credits</sprite>
       <sprite>sprites\spr_back</sprite>
+      <sprite>sprites\spr_controlsSFfont</sprite>
     </sprites>
     <sprite>sprites\spr_physicsBlock</sprite>
     <sprite>sprites\spr_physicsRamp</sprite>
@@ -110,6 +111,28 @@
       <sprite>sprites\spr_playerDanceWorm_3</sprite>
       <sprite>sprites\spr_playerSpawn_3</sprite>
     </sprites>
+    <sprites name="control_screen">
+      <sprite>sprites\spr_normalControls</sprite>
+      <sprite>sprites\spr_controlsBack</sprite>
+      <sprite>sprites\spr_performTheRit</sprite>
+      <sprite>sprites\spr_keyboard</sprite>
+      <sprite>sprites\spr_controller</sprite>
+      <sprite>sprites\spr_keyboardUnderlined</sprite>
+      <sprite>sprites\spr_controllerUnderlined</sprite>
+      <sprite>sprites\spr_movement</sprite>
+      <sprite>sprites\spr_jump</sprite>
+      <sprite>sprites\spr_throwKnife</sprite>
+      <sprite>sprites\spr_keyboardLeftRight</sprite>
+      <sprite>sprites\spr_keyboardUp</sprite>
+      <sprite>sprites\spr_keyboardSpaceBar</sprite>
+      <sprite>sprites\spr_keyboardV</sprite>
+      <sprite>sprites\spr_keyboardB</sprite>
+      <sprite>sprites\spr_controllerB</sprite>
+      <sprite>sprites\spr_controllerY</sprite>
+      <sprite>sprites\spr_controllerX</sprite>
+      <sprite>sprites\spr_controllerA</sprite>
+      <sprite>sprites\spr_controllerMovement</sprite>
+    </sprites>
     <sprites name="buttons_other">
       <sprite>sprites\spr_gotoLevelSelect</sprite>
     </sprites>
@@ -122,6 +145,11 @@
     <background>background\bk_story_0</background>
     <background>background\bk_story_1</background>
     <background>background\bk_story_2</background>
+    <background>background\tiles_sand</background>
+    <background>background\tiles_sand_back</background>
+    <background>background\bk_jungle_1</background>
+    <background>background\bk_jungle_2</background>
+    <background>background\bk_jungle_3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -176,6 +204,7 @@
       <object>objects\obj_control_main_menu</object>
       <object>objects\obj_start</object>
       <object>objects\obj_credits</object>
+      <object>objects\obj_controlsButton</object>
     </objects>
     <objects name="credits">
       <object>objects\obj_control_credits</object>
@@ -224,18 +253,45 @@
       <object>objects\obj_bitdecaysplash</object>
       <object>objects\obj_ggjsplash</object>
       <object>objects\obj_splashimg</object>
+      <object>objects\obj_story1</object>
+      <object>objects\obj_story2</object>
+      <object>objects\obj_story3</object>
     </objects>
     <objects name="score_screen">
       <object>objects\obj_score_screen</object>
     </objects>
+    <objects name="control_screen">
+      <object>objects\obj_danceTwerk</object>
+      <object>objects\obj_danceThriller</object>
+      <object>objects\obj_danceWorm</object>
+      <object>objects\obj_back</object>
+      <object>objects\obj_normalControls</object>
+      <object>objects\obj_performTheRit</object>
+      <object>objects\obj_keyboard</object>
+      <object>objects\obj_controller</object>
+      <object>objects\obj_keyboardUnderline</object>
+      <object>objects\obj_controllerUnderlined</object>
+      <object>objects\obj_movement</object>
+      <object>objects\obj_jump</object>
+      <object>objects\obj_throwKnife</object>
+      <object>objects\obj_keyboardLeftRight</object>
+      <object>objects\obj_keyboardUp</object>
+      <object>objects\obj_keyboardSpaceBar</object>
+      <object>objects\obj_keyboardV</object>
+      <object>objects\obj_keyboardB</object>
+      <object>objects\obj_controllerB</object>
+      <object>objects\obj_controllerY</object>
+      <object>objects\obj_controllerX</object>
+      <object>objects\obj_controllerA</object>
+      <object>objects\obj_controllerMovement</object>
+    </objects>
     <object>objects\obj_gotoLevelSelectBtn</object>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\reveal</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_splash</room>
+    <room>rooms\rm_story</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_credits</room>
     <rooms name="level_select">
@@ -243,10 +299,12 @@
     </rooms>
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
+      <room>rooms\rm_level_2</room>
     </rooms>
     <rooms name="score_screen">
       <room>rooms\rm_score_screen</room>
     </rooms>
+    <room>rooms\rm_controlScreen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
