@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!gameOver){
+            <string>if (!global.gameOver){
     var inst;
     inst = instance_create(x, y, playerDead);
     with(inst){
