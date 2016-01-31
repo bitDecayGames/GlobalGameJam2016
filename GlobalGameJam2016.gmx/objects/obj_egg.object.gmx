@@ -29,6 +29,10 @@
 ritual_happening = false
 image_speed = 0
 image_index = 0
+maxHealth = 20
+
+coolingDown = false
+coolDownTimer = room_speed * 3
 </string>
           </argument>
         </arguments>
@@ -138,6 +142,34 @@ physics_apply_impulse(406, 118, 310, -300)
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>coolingDown = false
+
+self.my_dancer = instance_place(x, y, obj_player)
+if (self.my_dancer != undefined){
+    self.my_dancer.hasControl = false
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -160,55 +192,23 @@ physics_apply_impulse(406, 118, 310, -300)
         if(instance_place(x, y, obj_player) == my_dancer){
             if(!ritual_happening){
                 random_dance_ritual = ceil(random(current_time) % 3)
-            
-                if(random_dance_ritual == 1){
-                    show_debug_message("Dance with Q")
-                }
-                else if (random_dance_ritual == 2){
-                    show_debug_message("Dance with W")
-                }
-                else if (random_dance_ritual == 3){
-                    show_debug_message("Dance with E")
-                }
                 ritual_happening = true
             }
             
-            if(random_dance_ritual == 1){
-                if(keyboard_check_pressed(ord('Q'))){
-                    show_debug_message("YOU HAVE COMPLETED PART OF THE RITUAL")
-                    health -= 1
-                    image_index += 1
-                    if(health &lt;= 0){
-                        instance_destroy()
-                    }
-                    show_debug_message(health)
-                    ritual_happening = false
-                }
+            if(random_dance_ritual == my_dancer.dancing){
+                health -= (1 / room_speed)
+                if (health &lt; 0) health = 0
+                image_index = maxHealth - floor(health);
+            } else if (my_dancer.hasControl &amp;&amp; my_dancer.dancing == -1){
+                ritual_happening = false
+                coolingDown = true;
+                alarm[3] = coolDownTimer;
             }
-            else if (random_dance_ritual == 2){
-                if(keyboard_check_pressed(ord('W'))){
-                    show_debug_message("YOU HAVE COMPLETED PART OF THE RITUAL")
-                    health -= 1
-                    image_index += 1
-                    if(health &lt;= 0){
-                        instance_destroy()
-                    }
-                    show_debug_message(health)
-                    ritual_happening = false
-                }
+            
+            if(health &lt;= 0){
+                instance_destroy();
             }
-            else if (random_dance_ritual == 3){
-                if(keyboard_check_pressed(ord('E'))){
-                    show_debug_message("YOU HAVE COMPLETED PART OF THE RITUAL")
-                    health -= 1
-                    image_index += 1
-                    if(health &lt;= 0){
-                        instance_destroy()
-                    }
-                    show_debug_message(health)
-                    ritual_happening = false
-                }
-            }
+            show_debug_message(health);
         } 
     }
 }
