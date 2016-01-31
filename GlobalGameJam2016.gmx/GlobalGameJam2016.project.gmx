@@ -297,6 +297,7 @@
     </rooms>
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
+      <room>rooms\rm_level_4</room>
     </rooms>
     <rooms name="score_screen">
       <room>rooms\rm_score_screen</room>
