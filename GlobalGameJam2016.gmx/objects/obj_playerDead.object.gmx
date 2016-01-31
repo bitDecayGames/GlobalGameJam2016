@@ -50,13 +50,13 @@ phy_fixed_rotation = true
           <argument>
             <kind>1</kind>
             <string>if ((killedFromLeft &amp;&amp; isFacingLeft) || (!killedFromLeft &amp;&amp; !isFacingLeft)){
-    if (phy_speed_x == 0 &amp;&amp; phy_speed_y == 0){
+    if (abs(phy_speed_x) &lt; .1 &amp;&amp; abs(phy_speed_y) &lt; .1){
         sprite_index = playerDeathBackStop
     } else {
         sprite_index = playerDeathBackFall
     }
 } else {
-    if (phy_speed_x == 0 &amp;&amp; phy_speed_y == 0){
+    if (abs(phy_speed_x) &lt; .1 &amp;&amp; abs(phy_speed_y) &lt; .1){
         sprite_index = playerDeathFrontStop
     } else {
         sprite_index = playerDeathFrontFall
