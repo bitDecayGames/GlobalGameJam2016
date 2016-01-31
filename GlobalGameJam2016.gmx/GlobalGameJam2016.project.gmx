@@ -134,6 +134,16 @@
     <scripts name="level_select">
       <script>scripts\src_random_level.gml</script>
     </scripts>
+    <script>scripts\src_playerOnStep.gml</script>
+    <scripts name="data">
+      <script>scripts\src_data.gml</script>
+      <script>scripts\src_set.gml</script>
+      <script>scripts\src_get.gml</script>
+      <script>scripts\src_increment.gml</script>
+    </scripts>
+    <scripts name="log">
+      <script>scripts\src_log.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -186,6 +196,9 @@
       <object>objects\obj_ggjsplash</object>
       <object>objects\obj_splashimg</object>
     </objects>
+    <objects name="score_screen">
+      <object>objects\obj_score_screen</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
@@ -200,6 +213,9 @@
       <room>rooms\rm_level_1</room>
     </rooms>
     <room>rooms\rm_</room>
+    <rooms name="score_screen">
+      <room>rooms\rm_score_screen</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
