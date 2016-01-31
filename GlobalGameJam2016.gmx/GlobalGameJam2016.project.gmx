@@ -19,7 +19,7 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_knife</sprite>
     <sprite>sprites\spr_spawnPoint</sprite>
-    <sprites name="player">
+    <sprites name="player_0">
       <sprite>sprites\spr_playerRun_0</sprite>
       <sprite>sprites\spr_playerLeftThrow_0</sprite>
       <sprite>sprites\spr_playerRightThrow_0</sprite>
@@ -31,6 +31,9 @@
       <sprite>sprites\spr_playerDeathBackStop_0</sprite>
       <sprite>sprites\spr_playerDeathFrontFall_0</sprite>
       <sprite>sprites\spr_playerDeathFrontStop_0</sprite>
+      <sprite>sprites\spr_playerDanceTwerk_0</sprite>
+      <sprite>sprites\spr_playerDanceThriller_0</sprite>
+      <sprite>sprites\spr_playerDanceWorm_0</sprite>
     </sprites>
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
@@ -38,6 +41,24 @@
     <sprites name="egg">
       <sprite>sprites\spr_egg</sprite>
       <sprite>sprites\spr_shell</sprite>
+    <sprites name="player_1">
+      <sprite>sprites\spr_playerRun_1</sprite>
+      <sprite>sprites\spr_playerStand_1</sprite>
+      <sprite>sprites\spr_playerRightThrow_1</sprite>
+      <sprite>sprites\spr_playerLeftThrow_1</sprite>
+      <sprite>sprites\spr_playerJumpUp_1</sprite>
+      <sprite>sprites\spr_playerJumpDown_1</sprite>
+      <sprite>sprites\spr_playerJumpApex_1</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_1</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_1</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_1</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_1</sprite>
+      <sprite>sprites\spr_playerDanceTwerk_1</sprite>
+      <sprite>sprites\spr_playerDanceThriller_1</sprite>
+      <sprite>sprites\spr_playerDanceWorm_1</sprite>
+    </sprites>
+    <sprites name="level_select">
+      <sprite>sprites\spr_level_select_btn</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -49,6 +70,7 @@
     <script>scripts\src_controllerRegisterer.gml</script>
     <script>scripts\src_playerControl.gml</script>
     <script>scripts\scr_createPlayer.gml</script>
+    <script>scripts\src_onPlayerInit.gml</script>
     <script>scripts\src_initializeGlobals.gml</script>
     <scripts name="credits">
       <script>scripts\src_credits.gml</script>
@@ -56,9 +78,16 @@
     <scripts name="main_menu">
       <script>scripts\src_mainMenu.gml</script>
     </scripts>
+    <scripts name="playerCommands">
+      <script>scripts\src_throw.gml</script>
+      <script>scripts\src_move.gml</script>
+      <script>scripts\src_jump.gml</script>
+    </scripts>
+    <scripts name="level_select">
+      <script>scripts\src_random_level.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_playerDead</object>
     <objects name="main_menu">
       <object>objects\obj_control_main_menu</object>
       <object>objects\obj_start</object>
@@ -81,6 +110,28 @@
     <objects name="egg">
       <object>objects\obj_shell</object>
       <object>objects\obj_egg</object>
+    <objects name="player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_playerDead</object>
+      <object>objects\obj_knifeSafe</object>
+      <object>objects\obj_knifeLethal</object>
+      <object>objects\obj_player_0</object>
+      <object>objects\obj_player_1</object>
+      <object>objects\obj_playerDead_0</object>
+      <object>objects\obj_playerDead_1</object>
+    </objects>
+    <objects name="system">
+      <object>objects\obj_controllerListener</object>
+      <object>objects\obj_spawnPoint</object>
+      <object>objects\obj_initializeGlobals</object>
+      <object>objects\obj_physicsBlock</object>
+      <object>objects\obj_physicsRamp</object>
+      <object>objects\obj_controllerDetector</object>
+    </objects>
+    <objects name="level_select">
+      <object>objects\obj_level_select_btn</object>
+      <object>objects\obj_level_1_btn</object>
+      <object>objects\obj_back_btn</object>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -88,10 +139,16 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
-    <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
+    <room>rooms\rm_splash</room>
+    <rooms name="level_select">
+      <room>rooms\rm_levelSelect</room>
+    </rooms>
+    <rooms name="levels">
+      <room>rooms\rm_level_1</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

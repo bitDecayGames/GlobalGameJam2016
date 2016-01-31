@@ -2,59 +2,51 @@ if is_undefined(controlNum) {
     return 0
 }
 
-//DPad check    
-if gamepad_button_check_pressed(controlNum, gp_padu) {
-    // First jump
-    if (place_meeting(x, y+1, obj_physicsBlock)){
-        jumping = true;
-        physics_apply_impulse(x, y, 0, jumpForce);
-        show_debug_message("Jump");
-    }
+var threshold = 0
+
+var verticalModifier = 0
+var amplification = 1.5
+
+//DPad check
+if gamepad_button_check(controlNum, gp_padu) {
+    verticalModifier = amplification
+} else if (gamepad_axis_value(controlNum, gp_axislv) < -threshold) {
+    verticalModifier = amplification * -gamepad_axis_value(controlNum, gp_axislv)
 }
-if gamepad_button_check_pressed(controlNum, gp_padd) {
+
+if gamepad_button_check(controlNum, gp_padd) {
     show_debug_message("A button pressed")
+    verticalModifier = -amplification 
+} else if (gamepad_axis_value(controlNum, gp_axislv) > threshold) {
+    verticalModifier = amplification * -gamepad_axis_value(controlNum, gp_axislv)
 }
+
 if gamepad_button_check(controlNum, gp_padl) {
-    physics_apply_force(x, y, -moveSpeed, -20)
-    image_xscale = -1
-    isFacingLeft = true
+    show_debug_message("move left pad")
+    src_move(true)
+} else if (gamepad_axis_value(controlNum, gp_axislh) < -threshold) {
+    show_debug_message("move left stick")
+    src_move(true)
 }
+
 if gamepad_button_check(controlNum, gp_padr) {
-    physics_apply_force(x, y, moveSpeed, -20)
-    image_xscale = 1
-    isFacingLeft = false
+    show_debug_message("move right pad")
+    src_move(false)
+} else if (gamepad_axis_value(controlNum, gp_axislh) > threshold) {
+    show_debug_message("move right stick")
+    src_move(false)
 }
 
 // Button check
 if gamepad_button_check_pressed(controlNum, gp_face1) {
     show_debug_message("A button pressed")
-    // First jump
-    if (place_meeting(x, y+1, obj_physicsBlock)){
-        jumping = true;
-        physics_apply_impulse(x, y, 0, jumpForce);
-    }
+    src_jump()
 }
 if gamepad_button_check_pressed(controlNum, gp_face2) {
     show_debug_message("B button pressed")
 }
 if gamepad_button_check_pressed(controlNum, gp_face3) {
-    if (!isThrowing){
-        var inst;
-        inst = instance_create(x, y, obj_knifeSafe);
-        with(inst){
-            if (other.isFacingLeft){
-                physics_apply_impulse(x, y-4, -other.knifeSpeed, -1.2)
-                image_xscale = -1
-            } else {
-                physics_apply_impulse(x, y-4, other.knifeSpeed, -1.2)
-            }
-        }
-        if (other.isFacingLeft) sprite_index = spr_playerLeftThrow_0
-        else sprite_index = spr_playerRightThrow_0
-        
-        isThrowing = true
-        image_speed = 0.1
-    }
+    src_throw(verticalModifier)
     show_debug_message("X button pressed")
 }
 if gamepad_button_check_pressed(controlNum, gp_face4) {
