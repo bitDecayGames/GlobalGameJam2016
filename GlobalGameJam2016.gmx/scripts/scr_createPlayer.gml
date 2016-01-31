@@ -1,6 +1,14 @@
 var spawnX = x
 var spawnY = y
 
+/*
+var xOffset = argument0
+var yOffset = argument1
+*/
+
+spawnX = spawnX + 40
+spawnY = spawnY - 25
+
 show_debug_message("Creating player for controller pad")
 if (spawnControlPad == undefined) {
     show_debug_message("spawnControlPad is undefined")
@@ -19,10 +27,12 @@ switch (spawnControlPad) {
     newPlayer = instance_create(spawnX, spawnY, obj_player_1)
     break
     case 2:
-    newPlayer = instance_create(spawnX, spawnY, obj_player_1)
+    newPlayer = instance_create(spawnX, spawnY, obj_player_2)
     break
     case 3:
-    newPlayer = instance_create(spawnX, spawnY, obj_player_1)
+    newPlayer = instance_create(spawnX, spawnY, obj_player_3)
     break
 }
+
+newPlayer.spawner = self.id
 newPlayer.controlNum = spawnControlPad
