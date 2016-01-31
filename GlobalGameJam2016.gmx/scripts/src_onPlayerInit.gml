@@ -20,3 +20,7 @@ killedFromLeft = false
 hasControl = true
 
 dancing = -1
+
+streamingHeartsCount = 0
+stepsBetweenHearts = 10
+heartsCoolDown = 10

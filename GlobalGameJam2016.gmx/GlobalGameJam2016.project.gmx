@@ -41,6 +41,9 @@
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
       <sprite>sprites\spr_ggjsplash</sprite>
+      <sprite>sprites\spr_story_0</sprite>
+      <sprite>sprites\spr_story_1</sprite>
+      <sprite>sprites\spr_story_2</sprite>
     </sprites>
     <sprites name="egg">
       <sprite>sprites\spr_egg</sprite>
@@ -50,6 +53,9 @@
       <sprite>sprites\spr_danceTwerk</sprite>
       <sprite>sprites\spr_danceThriller</sprite>
       <sprite>sprites\spr_danceWorm</sprite>
+      <sprite>sprites\spr_reveal</sprite>
+      <sprite>sprites\spr_eat</sprite>
+      <sprite>sprites\spr_heart</sprite>
     </sprites>
     <sprites name="player_1">
       <sprite>sprites\spr_playerRun_1</sprite>
@@ -127,9 +133,20 @@
       <sprite>sprites\spr_controllerA</sprite>
       <sprite>sprites\spr_controllerMovement</sprite>
     </sprites>
+    <sprites name="buttons_other">
+      <sprite>sprites\spr_gotoLevelSelect</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\tiles_stone</background>
+    <background>background\tiles_decoration_0</background>
+    <background>background\tiles_stone_back</background>
+    <background>background\bk_story_0</background>
+    <background>background\bk_story_1</background>
+    <background>background\bk_story_2</background>
+    <background>background\tiles_sand</background>
+    <background>background\tiles_sand_back</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -163,10 +180,18 @@
       <script>scripts\src_get.gml</script>
       <script>scripts\src_increment.gml</script>
       <script>scripts\src_init.gml</script>
+      <script>scripts\src_reset.gml</script>
     </scripts>
     <scripts name="log">
       <script>scripts\src_log.gml</script>
     </scripts>
+    <script>scripts\src_createEggShell.gml</script>
+    <script>scripts\src_createEggShells.gml</script>
+    <script>scripts\src_createBloodSplatter.gml</script>
+    <script>scripts\src_createHeartStream.gml</script>
+    <script>scripts\src_streamHeart.gml</script>
+    <script>scripts\src_streamHeartsNow.gml</script>
+    <script>scripts\src_fadeOut.gml</script>
     <scripts name="score_screen">
       <script>scripts\src_draw_scores.gml</script>
     </scripts>
@@ -188,12 +213,16 @@
       <object>objects\obj_eggBlood1</object>
       <object>objects\obj_eggBlood2</object>
       <object>objects\obj_danceHint</object>
+      <object>objects\obj_reveal</object>
+      <object>objects\obj_eat</object>
+      <object>objects\obj_heart</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
       <object>objects\obj_playerDead</object>
       <object>objects\obj_knifeSafe</object>
       <object>objects\obj_knifeLethal</object>
+      <object>objects\obj_knifeDead</object>
       <object>objects\obj_player_0</object>
       <object>objects\obj_player_1</object>
       <object>objects\obj_player_2</object>
@@ -202,7 +231,6 @@
       <object>objects\obj_playerDead_1</object>
       <object>objects\obj_playerDead_2</object>
       <object>objects\obj_playerDead_3</object>
-      <object>objects\obj_knifeDead</object>
     </objects>
     <objects name="system">
       <object>objects\obj_controllerListener</object>
@@ -251,12 +279,15 @@
       <object>objects\obj_controllerA</object>
       <object>objects\obj_controllerMovement</object>
     </objects>
+    <object>objects\obj_gotoLevelSelectBtn</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\reveal</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
     <rooms name="level_select">
       <room>rooms\rm_levelSelect</room>
@@ -267,7 +298,6 @@
     <rooms name="score_screen">
       <room>rooms\rm_score_screen</room>
     </rooms>
-    <room>rooms\rm_</room>
     <room>rooms\rm_controlScreen</room>
   </rooms>
   <help>

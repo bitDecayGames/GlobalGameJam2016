@@ -3,9 +3,9 @@
   <spriteName>spr_eggBlood2</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_eggBlood1</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events/>
   <PhysicsObject>-1</PhysicsObject>
@@ -20,9 +20,8 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>10,0</point>
-    <point>10,10</point>
-    <point>1,10</point>
+    <point>6,2</point>
+    <point>10,4</point>
+    <point>2,8</point>
   </PhysicsShapePoints>
 </object>

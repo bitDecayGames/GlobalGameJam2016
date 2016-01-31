@@ -4,11 +4,8 @@ if (hasControl){
         var inst;
         inst = instance_create(x, y, obj_knifeSafe);
         
-        var thisControlNum = controlNum;
         // Set the player that created the knife.
-        with (inst) {
-            playerNum = thisControlNum;
-        }
+        inst.playerNum = controlNum;
 
         with(inst){
             if (other.isFacingLeft){
