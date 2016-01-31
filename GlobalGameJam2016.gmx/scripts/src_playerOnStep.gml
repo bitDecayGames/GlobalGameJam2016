@@ -1,12 +1,12 @@
 phy_speed_x = max(min(phy_speed_x, max_xspeed), -max_xspeed)
 
-if (!isThrowing){
+if (!isThrowing && dancing == -1){
     if (phy_speed_y > 0.3){
         sprite_index = playerJumpDown
-        image_speed = 3 
+        image_speed = 0.5
     } else if (phy_speed_y < -0.3){
         sprite_index = playerJumpUp
-        image_speed = 3 
+        image_speed = 0.5 
     } else if (!place_meeting(x, y+1, obj_physicsBlock)){
         sprite_index = playerJumpApex
         image_speed = 1     

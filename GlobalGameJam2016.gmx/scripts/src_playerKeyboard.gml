@@ -16,3 +16,13 @@ if (keyboard_check_pressed(vk_space)){
     src_throw(verticalModifier)
 }
 
+if (keyboard_check_pressed(ord('V'))){
+    if (!hasControl && dancing == -1){
+        src_dance(2);
+    }
+} else if (keyboard_check_pressed(ord('B'))){
+    if (!hasControl && dancing == -1){
+        src_dance(3);
+    }
+}
+

@@ -28,6 +28,8 @@
             <string>bouncesRemaining = 1
 stepsSinceLastBounce = 0
 fadeOut = false
+// Player who spawned the knife.
+playerNum = -1;
 </string>
           </argument>
         </arguments>
@@ -183,6 +185,8 @@ if (bouncesRemaining &lt; 0) {
             <kind>1</kind>
             <string>if (x &lt; other.x) other.killedFromLeft = false
 else other.killedFromLeft = true
+
+src_increment(playerNum, global.NUM_PLAYERS_KILLED, 1);
 </string>
           </argument>
         </arguments>

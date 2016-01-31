@@ -39,7 +39,7 @@ for(i=ds_map_find_first(global.availablePads); count&lt;ds_map_size(global.avail
         show_debug_message("Claiming pad" + string(i))
         spawnControlPad = i             // set our pad
         global.claimedPads[? i] = true  // let the world know it is ours
-        scr_createPlayer()
+        scr_createPlayer(20, 25)
         switch (i){
             case 0:
             sprite_index = spr_playerSpawn_0;
@@ -84,11 +84,11 @@ for(i=ds_map_find_first(global.availablePads); count&lt;ds_map_size(global.avail
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>20</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>25</string>
           </argument>
           <argument>
             <kind>0</kind>
