@@ -49,8 +49,8 @@ if gamepad_button_check_pressed(controlNum, gp_face3) {
                 physics_apply_impulse(x, y-4, other.knifeSpeed, -1.2)
             }
         }
-        if (other.isFacingLeft) sprite_index = spr_playerLeftThrow_0
-        else sprite_index = spr_playerRightThrow_0
+        if (other.isFacingLeft) sprite_index = playerLeftThrow
+        else sprite_index = playerRightThrow
         
         isThrowing = true
         image_speed = 0.1

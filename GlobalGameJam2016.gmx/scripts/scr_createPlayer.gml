@@ -8,5 +8,5 @@ if (spawnControlPad == undefined) {
 } else {
     show_debug_message(spawnControlPad)
 }
-newPlayer = instance_create(spawnX, spawnY, obj_player)
+newPlayer = instance_create(spawnX, spawnY, obj_player_0)
 newPlayer.controlNum = spawnControlPad
