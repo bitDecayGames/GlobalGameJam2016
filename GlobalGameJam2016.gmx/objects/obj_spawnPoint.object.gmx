@@ -46,10 +46,10 @@ for(i=ds_map_find_first(global.availablePads); count&lt;ds_map_size(global.avail
             sprite_index = spr_playerSpawn_1;
             break;
             case 2:
-            sprite_index = spr_playerSpawn_1;
+            sprite_index = spr_playerSpawn_2;
             break;
             case 3:
-            sprite_index = spr_playerSpawn_1;
+            sprite_index = spr_playerSpawn_3;
             break;
         }
         break

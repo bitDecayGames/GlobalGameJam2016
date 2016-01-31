@@ -77,6 +77,23 @@
       <sprite>sprites\spr_playerDanceWorm_2</sprite>
       <sprite>sprites\spr_playerSpawn_2</sprite>
     </sprites>
+    <sprites name="player_3">
+      <sprite>sprites\spr_playerRun_3</sprite>
+      <sprite>sprites\spr_playerStand_3</sprite>
+      <sprite>sprites\spr_playerRightThrow_3</sprite>
+      <sprite>sprites\spr_playerLeftThrow_3</sprite>
+      <sprite>sprites\spr_playerJumpUp_3</sprite>
+      <sprite>sprites\spr_playerJumpDown_3</sprite>
+      <sprite>sprites\spr_playerJumpApex_3</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_3</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_3</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_3</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_3</sprite>
+      <sprite>sprites\spr_playerDanceTwerk_3</sprite>
+      <sprite>sprites\spr_playerDanceThriller_3</sprite>
+      <sprite>sprites\spr_playerDanceWorm_3</sprite>
+      <sprite>sprites\spr_playerSpawn_3</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -123,8 +140,12 @@
       <object>objects\obj_knifeLethal</object>
       <object>objects\obj_player_0</object>
       <object>objects\obj_player_1</object>
+      <object>objects\obj_player_2</object>
+      <object>objects\obj_player_3</object>
       <object>objects\obj_playerDead_0</object>
       <object>objects\obj_playerDead_1</object>
+      <object>objects\obj_playerDead_2</object>
+      <object>objects\obj_playerDead_3</object>
       <object>objects\obj_knifeDead</object>
     </objects>
     <objects name="system">

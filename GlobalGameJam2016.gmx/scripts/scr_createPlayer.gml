@@ -19,10 +19,10 @@ switch (spawnControlPad) {
     newPlayer = instance_create(spawnX, spawnY, obj_player_1)
     break
     case 2:
-    newPlayer = instance_create(spawnX, spawnY, obj_player_1)
+    newPlayer = instance_create(spawnX, spawnY, obj_player_2)
     break
     case 3:
-    newPlayer = instance_create(spawnX, spawnY, obj_player_1)
+    newPlayer = instance_create(spawnX, spawnY, obj_player_3)
     break
 }
 
