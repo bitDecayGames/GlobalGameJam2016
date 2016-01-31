@@ -74,28 +74,6 @@
     <object>objects\obj_knifeLethal</object>
     <object>objects\obj_spawnPoint</object>
     <object>objects\obj_initializeGlobals</object>
-    <objects name="htme_demo">
-      <objects name="menu">
-        <object>objects\htme_obj_waitforclient</object>
-        <object>objects\htme_obj_menu</object>
-      </objects>
-      <objects name="game">
-        <object>objects\htme_obj_wall</object>
-        <object>objects\htme_obj_player</object>
-        <object>objects\htme_obj_time</object>
-        <object>objects\htme_obj_playerlist</object>
-        <object>objects\htme_obj_door</object>
-        <object>objects\htme_obj_network_control</object>
-        <object>objects\htme_obj_chat</object>
-      </objects>
-      <object>objects\htme_obj_lanlobbydemo</object>
-    </objects>
-    <objects name="htme">
-      <object>objects\obj_htme</object>
-    </objects>
-    <objects name="udphp_demo">
-      <object>objects\obj_udphphtme_lobby</object>
-    </objects>
     <object>objects\obj_excalibur</object>
     <object>objects\obj_bitdecaysplash</object>
   </objects>
