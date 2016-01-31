@@ -18,6 +18,7 @@
     <sprite>sprites\spr_physicsRamp</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_knife</sprite>
+    <sprite>sprites\spr_excalibur</sprite>
     <sprite>sprites\spr_spawnPoint</sprite>
     <sprites name="player_0">
       <sprite>sprites\spr_playerRun_0</sprite>
@@ -34,6 +35,7 @@
       <sprite>sprites\spr_playerDanceTwerk_0</sprite>
       <sprite>sprites\spr_playerDanceThriller_0</sprite>
       <sprite>sprites\spr_playerDanceWorm_0</sprite>
+      <sprite>sprites\spr_playerSpawn_0</sprite>
     </sprites>
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
@@ -59,9 +61,44 @@
       <sprite>sprites\spr_playerDanceTwerk_1</sprite>
       <sprite>sprites\spr_playerDanceThriller_1</sprite>
       <sprite>sprites\spr_playerDanceWorm_1</sprite>
+      <sprite>sprites\spr_playerSpawn_1</sprite>
     </sprites>
     <sprites name="level_select">
       <sprite>sprites\spr_level_select_btn</sprite>
+    </sprites>
+    <sprites name="player_2">
+      <sprite>sprites\spr_playerRun_2</sprite>
+      <sprite>sprites\spr_playerStand_2</sprite>
+      <sprite>sprites\spr_playerRightThrow_2</sprite>
+      <sprite>sprites\spr_playerLeftThrow_2</sprite>
+      <sprite>sprites\spr_playerJumpUp_2</sprite>
+      <sprite>sprites\spr_playerJumpDown_2</sprite>
+      <sprite>sprites\spr_playerJumpApex_2</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_2</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_2</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_2</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_2</sprite>
+      <sprite>sprites\spr_playerDanceTwerk_2</sprite>
+      <sprite>sprites\spr_playerDanceThriller_2</sprite>
+      <sprite>sprites\spr_playerDanceWorm_2</sprite>
+      <sprite>sprites\spr_playerSpawn_2</sprite>
+    </sprites>
+    <sprites name="player_3">
+      <sprite>sprites\spr_playerRun_3</sprite>
+      <sprite>sprites\spr_playerStand_3</sprite>
+      <sprite>sprites\spr_playerRightThrow_3</sprite>
+      <sprite>sprites\spr_playerLeftThrow_3</sprite>
+      <sprite>sprites\spr_playerJumpUp_3</sprite>
+      <sprite>sprites\spr_playerJumpDown_3</sprite>
+      <sprite>sprites\spr_playerJumpApex_3</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_3</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_3</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_3</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_3</sprite>
+      <sprite>sprites\spr_playerDanceTwerk_3</sprite>
+      <sprite>sprites\spr_playerDanceThriller_3</sprite>
+      <sprite>sprites\spr_playerDanceWorm_3</sprite>
+      <sprite>sprites\spr_playerSpawn_3</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -116,8 +153,12 @@
       <object>objects\obj_knifeLethal</object>
       <object>objects\obj_player_0</object>
       <object>objects\obj_player_1</object>
+      <object>objects\obj_player_2</object>
+      <object>objects\obj_player_3</object>
       <object>objects\obj_playerDead_0</object>
       <object>objects\obj_playerDead_1</object>
+      <object>objects\obj_playerDead_2</object>
+      <object>objects\obj_playerDead_3</object>
       <object>objects\obj_knifeDead</object>
     </objects>
     <objects name="system">
