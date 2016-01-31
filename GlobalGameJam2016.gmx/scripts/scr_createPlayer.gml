@@ -1,6 +1,14 @@
 var spawnX = x
 var spawnY = y
 
+/*
+var xOffset = argument0
+var yOffset = argument1
+*/
+
+spawnX = spawnX + 40
+spawnY = spawnY - 25
+
 show_debug_message("Creating player for controller pad")
 if (spawnControlPad == undefined) {
     show_debug_message("spawnControlPad is undefined")
