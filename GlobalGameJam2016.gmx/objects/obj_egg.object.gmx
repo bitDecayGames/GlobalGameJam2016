@@ -228,7 +228,14 @@ if (self.my_dancer){
             if(random_dance_ritual == my_dancer.dancing){
                 health -= (1 / room_speed)
                 if (health &lt; 0) health = 0
-                image_index = maxHealth - ceil(health);
+                
+                // Play sound if image index changes
+                var newIndex = maxHealth - ceil(health);
+                if (newIndex != imageIndex) {
+                    image_index = newIndex;
+                    audio_play_sound(choose(snd_egg_crack_1, snd_egg_crack_2, snd_egg_crack_3), 10, false);
+                }
+
                 my_dancer.phy_position_x = x;
             } else if (my_dancer.hasControl &amp;&amp; my_dancer.dancing == -1){
                 ritual_happening = false
