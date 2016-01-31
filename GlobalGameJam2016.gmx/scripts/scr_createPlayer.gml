@@ -25,4 +25,6 @@ switch (spawnControlPad) {
     newPlayer = instance_create(spawnX, spawnY, obj_player_1)
     break
 }
+
+newPlayer.spawner = self.id
 newPlayer.controlNum = spawnControlPad

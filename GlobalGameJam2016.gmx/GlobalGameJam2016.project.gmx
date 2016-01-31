@@ -72,6 +72,7 @@
     <script>scripts\script_centerX.gml</script>
     <script>scripts\src_controllerRegisterer.gml</script>
     <script>scripts\src_playerControl.gml</script>
+    <script>scripts\src_playerKeyboard.gml</script>
     <script>scripts\scr_createPlayer.gml</script>
     <script>scripts\src_onPlayerInit.gml</script>
     <script>scripts\src_initializeGlobals.gml</script>
@@ -89,6 +90,7 @@
     <scripts name="level_select">
       <script>scripts\src_random_level.gml</script>
     </scripts>
+    <script>scripts\src_playerOnStep.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -116,6 +118,7 @@
       <object>objects\obj_player_1</object>
       <object>objects\obj_playerDead_0</object>
       <object>objects\obj_playerDead_1</object>
+      <object>objects\obj_knifeDead</object>
     </objects>
     <objects name="system">
       <object>objects\obj_controllerListener</object>
