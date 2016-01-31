@@ -49,6 +49,8 @@
       <sprite>sprites\spr_danceTwerk</sprite>
       <sprite>sprites\spr_danceThriller</sprite>
       <sprite>sprites\spr_danceWorm</sprite>
+      <sprite>sprites\spr_reveal</sprite>
+      <sprite>sprites\sprite80</sprite>
     </sprites>
     <sprites name="player_1">
       <sprite>sprites\spr_playerRun_1</sprite>
@@ -143,6 +145,8 @@
     <scripts name="log">
       <script>scripts\src_log.gml</script>
     </scripts>
+    <script>scripts\src_createEggShell.gml</script>
+    <script>scripts\src_createEggShells.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -199,6 +203,9 @@
       <object>objects\obj_score_screen</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\reveal</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
     <room>rooms\rm_splash</room>
