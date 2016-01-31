@@ -74,7 +74,7 @@ alarm[1] = room_speed * 0.1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// end the level
+            <string>room_goto(rm_score_screen)
 </string>
           </argument>
         </arguments>

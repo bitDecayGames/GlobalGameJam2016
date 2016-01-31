@@ -108,7 +108,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hasControl = true
+            <string>if (!gameOver) {
+    hasControl = true
+}
 </string>
           </argument>
         </arguments>
