@@ -105,7 +105,9 @@ stepsSinceLastBounce++
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// make it so
+            <string>audio_play_sound(choose(snd_knife_drop), 10, false);
+
+// make it so
 if (stepsSinceLastBounce &gt; 5) {
     stepsSinceLastBounce = 0
     bouncesRemaining--
@@ -137,7 +139,7 @@ if (bouncesRemaining &lt; 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// make it so
+            <string>audio_play_sound(choose(snd_knife_on_kinfe), 10, false);
 </string>
           </argument>
         </arguments>

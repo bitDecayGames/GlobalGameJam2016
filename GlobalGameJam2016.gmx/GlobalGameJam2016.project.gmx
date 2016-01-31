@@ -7,6 +7,18 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_introMusic</sound>
+    <sound>sound\snd_crush</sound>
+    <sound>sound\snd_death_1</sound>
+    <sound>sound\snd_death_2</sound>
+    <sound>sound\snd_death_3</sound>
+    <sound>sound\snd_egg_crack_1</sound>
+    <sound>sound\snd_egg_crack_2</sound>
+    <sound>sound\snd_egg_crack_3</sound>
+    <sound>sound\snd_jump_1</sound>
+    <sound>sound\snd_jump_2</sound>
+    <sound>sound\snd_knife_drop</sound>
+    <sound>sound\snd_knife_on_kinfe</sound>
+    <sound>sound\snd_knife_throw</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="main_menu">
@@ -44,6 +56,9 @@
       <sprite>sprites\spr_story_0</sprite>
       <sprite>sprites\spr_story_1</sprite>
       <sprite>sprites\spr_story_2</sprite>
+      <sprite>sprites\spr_story_text_0</sprite>
+      <sprite>sprites\spr_story_text_1</sprite>
+      <sprite>sprites\spr_story_text_2</sprite>
     </sprites>
     <sprites name="egg">
       <sprite>sprites\spr_egg</sprite>
@@ -256,6 +271,9 @@
       <object>objects\obj_story1</object>
       <object>objects\obj_story2</object>
       <object>objects\obj_story3</object>
+      <object>objects\obj_storyText1</object>
+      <object>objects\obj_storyText2</object>
+      <object>objects\obj_storyText3</object>
     </objects>
     <objects name="score_screen">
       <object>objects\obj_score_screen</object>
@@ -298,7 +316,9 @@
     </rooms>
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
+      <room>rooms\rm_level_3</room>
       <room>rooms\rm_level_2</room>
+      <room>rooms\rm_level_4</room>
     </rooms>
     <rooms name="score_screen">
       <room>rooms\rm_score_screen</room>

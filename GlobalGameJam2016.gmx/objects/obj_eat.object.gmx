@@ -50,6 +50,8 @@ alarm[1] = room_speed * 0.1
           <argument>
             <kind>1</kind>
             <string>with(my_dancer){
+    audio_play_sound(choose(snd_crush), 10, false);
+
     instance_destroy()
 }
 </string>
