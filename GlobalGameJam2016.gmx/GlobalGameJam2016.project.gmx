@@ -300,6 +300,11 @@
     <scripts name="networking">
       <script>scripts\src_connecting.gml</script>
     </scripts>
+    <scripts name="playerCommands">
+      <script>scripts\src_throw.gml</script>
+      <script>scripts\src_move.gml</script>
+      <script>scripts\src_jump.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_playerDead</object>
