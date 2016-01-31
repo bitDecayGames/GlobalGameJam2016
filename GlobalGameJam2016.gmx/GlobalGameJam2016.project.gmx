@@ -263,6 +263,9 @@
     <objects name="level_select">
       <object>objects\obj_level_select_btn</object>
       <object>objects\obj_level_1_btn</object>
+      <object>objects\obj_level_2_btn</object>
+      <object>objects\obj_level_3_btn</object>
+      <object>objects\obj_level_4_btn</object>
       <object>objects\obj_back_btn</object>
     </objects>
     <objects name="splash">
