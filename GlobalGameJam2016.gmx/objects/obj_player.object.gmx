@@ -168,9 +168,7 @@ if (!isThrowing){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>physics_apply_force(x, y, moveSpeed, -20)
-image_xscale = 1
-isFacingLeft = false
+            <string>src_move(false)
 </string>
           </argument>
         </arguments>
@@ -193,9 +191,7 @@ isFacingLeft = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>physics_apply_force(x, y, -moveSpeed, -20)
-image_xscale = -1
-isFacingLeft = true
+            <string>src_move(true)
 </string>
           </argument>
         </arguments>
@@ -286,11 +282,7 @@ isFacingLeft = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// First jump
-if (place_meeting(x, y+1, obj_physicsBlock)){
-    jumping = true;
-    physics_apply_impulse(x, y, 0, jumpForce);
-}
+            <string>src_jump()
 </string>
           </argument>
         </arguments>
@@ -339,22 +331,12 @@ if (place_meeting(x, y+1, obj_physicsBlock)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!isThrowing){
-    var inst;
-    inst = instance_create(x, y, obj_knifeSafe);
-    with(inst){
-        if (other.isFacingLeft){
-            physics_apply_impulse(x, y-4, -other.knifeSpeed, -1.2)
-            image_xscale = -1
-        } else {
-            physics_apply_impulse(x, y-4, other.knifeSpeed, -1.2)
-        }
-    }
-    if (other.isFacingLeft) sprite_index = playerLeftThrow
-    else sprite_index = playerRightThrow
-    
-    isThrowing = true
-    image_speed = 0.1
+            <string>if (keyboard_check(vk_up)) {
+    src_throw(1)
+} else if (keyboard_check(vk_down)) {
+    src_throw(-1)
+} else {
+    src_throw(0)
 }
 </string>
           </argument>
