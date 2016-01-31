@@ -269,9 +269,11 @@ else {
           <argument>
             <kind>1</kind>
             <string>show_debug_message("collision with player detected")
-self.my_dancer = instance_place(x, y, obj_player)
 
-self.my_dancer.hasControl = false
+self.my_dancer = instance_place(x, y, obj_player)
+if (self.my_dancer != undefined) {
+    self.my_dancer.hasControl = false
+}
 </string>
           </argument>
         </arguments>
@@ -306,8 +308,8 @@ self.my_dancer.hasControl = false
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>16,0</point>
-    <point>112,0</point>
+    <point>16,80</point>
+    <point>112,80</point>
     <point>112,112</point>
     <point>16,112</point>
   </PhysicsShapePoints>
