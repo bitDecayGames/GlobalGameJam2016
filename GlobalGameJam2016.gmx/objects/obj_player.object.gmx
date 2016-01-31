@@ -25,23 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var inst;
-inst = instance_create(x, y, playerDead);
-with(inst){
-    inst.killedFromLeft = other.killedFromLeft;
-    inst.isFacingLeft = other.isFacingLeft;
-    show_debug_message("killed: " + string(other.killedFromLeft) + " " + string(other.isFacingLeft))
-    if (other.killedFromLeft){
-        physics_apply_impulse(x, y, -30, -40)
-    } else {
-        physics_apply_impulse(x, y, 30, -40)
+            <string>if (!gameOver){
+    var inst;
+    inst = instance_create(x, y, playerDead);
+    with(inst){
+        inst.killedFromLeft = other.killedFromLeft;
+        inst.isFacingLeft = other.isFacingLeft;
+        show_debug_message("killed: " + string(other.killedFromLeft) + " " + string(other.isFacingLeft))
+        if (other.killedFromLeft){
+            physics_apply_impulse(x, y, -30, -40)
+        } else {
+            physics_apply_impulse(x, y, 30, -40)
+        }
     }
-}
-show_debug_message("Setting alarm0 to 60 for spawner " + string(spawner))
-with (spawner) {
-    if (alarm[0] == -1) {
-        show_debug_message("Alarm set to -1")
-        alarm[0] = 200
+    show_debug_message("Setting alarm0 to 60 for spawner " + string(spawner))
+    with (spawner) {
+        if (alarm[0] == -1) {
+            show_debug_message("Alarm set to -1")
+            alarm[0] = 200
+        }
     }
 }
 </string>
@@ -113,6 +115,46 @@ with (spawner) {
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>src_streamHeart</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -262,22 +304,41 @@ with (spawner) {
     <event eventtype="9" enumb="80">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>hasControl = !hasControl;
-</string>
+            <kind>9</kind>
+            <script>src_streamHeartsNow</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>10</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
