@@ -55,11 +55,21 @@ phy_fixed_rotation = true
     image_index = spr_playerDeathBackFall_0
 }*/
 
-if (phy_speed_x == 0 &amp;&amp; phy_speed_y == 0){
-    sprite_index = spr_playerDeathBackStop_0
+if ((killedFromLeft &amp;&amp; isFacingLeft) || (!killedFromLeft &amp;&amp; !isFacingLeft)){
+    if (phy_speed_x == 0 &amp;&amp; phy_speed_y == 0){
+        sprite_index = spr_playerDeathBackStop_0
+    } else {
+        sprite_index = spr_playerDeathBackFall_0
+    }
 } else {
-    sprite_index = spr_playerDeathBackFall_0
+    if (phy_speed_x == 0 &amp;&amp; phy_speed_y == 0){
+        sprite_index = spr_playerDeathFrontStop_0
+    } else {
+        sprite_index = spr_playerDeathFrontFall_0
+    }
 }
+
+if (isFacingLeft) image_xscale = -1
 </string>
           </argument>
         </arguments>
@@ -111,9 +121,9 @@ if (phy_speed_x == 0 &amp;&amp; phy_speed_y == 0){
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectLinearDamping>1</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
+  <PhysicsObjectFriction>2</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>

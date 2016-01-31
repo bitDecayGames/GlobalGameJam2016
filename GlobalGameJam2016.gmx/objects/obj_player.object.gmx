@@ -32,15 +32,15 @@ startY = y
 
 phy_fixed_rotation = true
 
-moveSpeed = 200
-max_xspeed = 2
+moveSpeed = 1000
+max_xspeed = 3
 jumping = false
-jumpForce = -160
+jumpForce = -180
 
 isFacingLeft = false
 isThrowing = false
 
-knifeSpeed = 2
+knifeSpeed = 3.2
 
 killedFromLeft = false
 </string>
@@ -68,10 +68,13 @@ killedFromLeft = false
             <string>var inst;
 inst = instance_create(x, y, obj_playerDead);
 with(inst){
-    if (other.isFacingLeft){
-        physics_apply_impulse(x, y+1, -5, -2)
+    inst.killedFromLeft = other.killedFromLeft;
+    inst.isFacingLeft = other.isFacingLeft;
+    show_debug_message("killed: " + string(other.killedFromLeft) + " " + string(other.isFacingLeft))
+    if (other.killedFromLeft){
+        physics_apply_impulse(x, y, -30, -40)
     } else {
-        physics_apply_impulse(x, y+1, 5, -2)
+        physics_apply_impulse(x, y, 30, -40)
     }
 }
 
@@ -140,25 +143,25 @@ with(inst){
             <string>phy_speed_x = max(min(phy_speed_x, max_xspeed), -max_xspeed)
 
 if (!isThrowing){
-    if (!place_meeting(x, y+1, obj_physicsBlock)){
+    if (phy_speed_y &gt; 0.3){
+        sprite_index = spr_playerJumpDown_0
+        image_speed = 3 
+    } else if (phy_speed_y &lt; -0.3){
+        sprite_index = spr_playerJumpUp_0
+        image_speed = 3 
+    } else if (!place_meeting(x, y+1, obj_physicsBlock)){
         sprite_index = spr_playerJumpApex_0
-        image_speed = 1   
+        image_speed = 1     
     } else {
         if (phy_speed_x &gt; 0.1 || phy_speed_x &lt; -0.1){
             sprite_index = spr_playerRun_0
-            image_speed = phy_speed_x / 10
+            image_speed = phy_speed_x / 20
         } else {
             sprite_index = spr_playerStand_0
             image_speed = 0.1
         }
     }
-    if (phy_speed_y &gt; 0.3){
-        sprite_index = spr_playerJumpDown_0
-        image_speed = 1 
-    } else if (phy_speed_y &lt; -0.3){
-        sprite_index = spr_playerJumpUp_0
-        image_speed = 1    
-    } 
+    
 }
 </string>
           </argument>
@@ -327,7 +330,6 @@ isFacingLeft = true
 if (place_meeting(x, y+1, obj_physicsBlock)){
     jumping = true;
     physics_apply_impulse(x, y, 0, jumpForce);
-    show_debug_message("Jump");
 }
 </string>
           </argument>
@@ -382,16 +384,17 @@ if (place_meeting(x, y+1, obj_physicsBlock)){
     inst = instance_create(x, y, obj_knifeSafe);
     with(inst){
         if (other.isFacingLeft){
-            physics_apply_impulse(x, y+1, -other.knifeSpeed, -2)
+            physics_apply_impulse(x, y-4, -other.knifeSpeed, -1.2)
+            image_xscale = -1
         } else {
-            physics_apply_impulse(x, y+1, other.knifeSpeed, -2)
+            physics_apply_impulse(x, y-4, other.knifeSpeed, -1.2)
         }
     }
     if (other.isFacingLeft) sprite_index = spr_playerLeftThrow_0
     else sprite_index = spr_playerRightThrow_0
     
     isThrowing = true
-    image_speed = 1
+    image_speed = 0.1
 }
 </string>
           </argument>
@@ -457,15 +460,15 @@ if (place_meeting(x, y+1, obj_physicsBlock)){
   <PhysicsObjectDensity>1</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>1</PhysicsObjectLinearDamping>
+  <PhysicsObjectLinearDamping>0.5</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.100000001490116</PhysicsObjectFriction>
+  <PhysicsObjectFriction>1</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>12,10</point>
     <point>28,10</point>
-    <point>28,38</point>
-    <point>12,38</point>
+    <point>28,36</point>
+    <point>12,36</point>
   </PhysicsShapePoints>
 </object>

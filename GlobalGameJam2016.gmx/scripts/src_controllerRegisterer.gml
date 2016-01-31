@@ -9,7 +9,7 @@ case "gamepad discovered":                     // A game pad has been discovered
     gamepad_set_button_threshold(pad, 0.1);    // Set the "threshold" for the triggers
     global.availablePads[? pad] = true         // Flag the pad as being available now
     global.claimedPads[? pad] = false          // Flag the pad as not yet claimed
-    for(i = 0; i < instance_number(obj_spawnPoint); i += 1) {
+    /*for(i = 0; i < instance_number(obj_spawnPoint); i += 1) {
         spawnPoint = instance_find(obj_spawnPoint, i)
         if (spawnPoint.spawnControlPad == undefined) {
         show_debug_message("assinging controller to spawn")
@@ -17,7 +17,7 @@ case "gamepad discovered":                     // A game pad has been discovered
             global.claimedPads[pad] = true
             break
         }
-    }
+    }*/
     break
 case "gamepad lost":                           // Gamepad has been removed or otherwise disabled
     var pad = async_load[? "pad_index"];       // Get the pad index
