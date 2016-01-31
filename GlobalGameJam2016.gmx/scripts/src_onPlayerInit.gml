@@ -18,5 +18,10 @@ knifeSpeed = 3.2
 killedFromLeft = false
 
 hasControl = true
+gameOver = false
 
 dancing = -1
+
+streamingHeartsCount = 0
+stepsBetweenHearts = 10
+heartsCoolDown = 10
