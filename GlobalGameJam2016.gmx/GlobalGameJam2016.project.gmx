@@ -60,6 +60,23 @@
     <sprites name="level_select">
       <sprite>sprites\spr_level_select_btn</sprite>
     </sprites>
+    <sprites name="player_2">
+      <sprite>sprites\spr_playerRun_2</sprite>
+      <sprite>sprites\spr_playerStand_2</sprite>
+      <sprite>sprites\spr_playerRightThrow_2</sprite>
+      <sprite>sprites\spr_playerLeftThrow_2</sprite>
+      <sprite>sprites\spr_playerJumpUp_2</sprite>
+      <sprite>sprites\spr_playerJumpDown_2</sprite>
+      <sprite>sprites\spr_playerJumpApex_2</sprite>
+      <sprite>sprites\spr_playerDeathBackFall_2</sprite>
+      <sprite>sprites\spr_playerDeathBackStop_2</sprite>
+      <sprite>sprites\spr_playerDeathFrontFall_2</sprite>
+      <sprite>sprites\spr_playerDeathFrontStop_2</sprite>
+      <sprite>sprites\spr_playerDanceTwerk_2</sprite>
+      <sprite>sprites\spr_playerDanceThriller_2</sprite>
+      <sprite>sprites\spr_playerDanceWorm_2</sprite>
+      <sprite>sprites\spr_playerSpawn_2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
