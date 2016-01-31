@@ -162,6 +162,7 @@
     <background>background\bk_jungle_1</background>
     <background>background\bk_jungle_2</background>
     <background>background\bk_jungle_3</background>
+    <background>background\bk_scoreScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -299,9 +300,11 @@
     </objects>
     <object>objects\obj_gotoLevelSelectBtn</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
+    <rooms name="score_screen">
+      <room>rooms\rm_score_screen</room>
+    </rooms>
     <room>rooms\rm_splash</room>
     <room>rooms\rm_story</room>
     <room>rooms\rm_menu</room>
@@ -312,9 +315,6 @@
     <rooms name="levels">
       <room>rooms\rm_level_1</room>
       <room>rooms\rm_level_2</room>
-    </rooms>
-    <rooms name="score_screen">
-      <room>rooms\rm_score_screen</room>
     </rooms>
     <room>rooms\rm_controlScreen</room>
   </rooms>
