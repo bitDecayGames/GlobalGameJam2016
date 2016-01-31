@@ -51,8 +51,8 @@ fadeOut = false
           <argument>
             <kind>1</kind>
             <string>if fadeOut {
-    var deadKnife = instance_create(x,y,obj_knifeDead)
-    deadKnife.image_angle = image_angle
+    var deadKnife = instance_create(x,y,obj_knifeDead);
+    deadKnife.image_angle = image_angle;
 }
 </string>
           </argument>

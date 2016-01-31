@@ -8,7 +8,7 @@ startY = y
 moveSpeed = 1000
 max_xspeed = 3
 jumping = false
-jumpForce = -180
+jumpForce = -333
 
 isFacingLeft = false
 isThrowing = false
