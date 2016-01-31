@@ -1,7 +1,7 @@
 var ROW_INCREMENT = 175;
 var COLUMN_INCRMENT = 200;
 var ROW_OFFSET = 100;
-var COLUMN_OFFSET = 375;
+var COLUMN_OFFSET = 450;
 
 // i = row on screen.
 var i;
