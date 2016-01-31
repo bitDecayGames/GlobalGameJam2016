@@ -31,6 +31,56 @@ ritual_happening = false
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>721</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_health</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>20</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_excalibur</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -71,6 +121,11 @@ ritual_happening = false
                 if(keyboard_check_pressed(ord('Q'))){
                     show_debug_message("YOU HAVE COMPLETED PART OF THE RITUAL")
                     phy_position_y -= 1
+                    health -= 1
+                    if(health &lt;= 0){
+                        instance_destroy()
+                    }
+                    show_debug_message(health)
                     ritual_happening = false
                 }
             }
@@ -78,6 +133,11 @@ ritual_happening = false
                 if(keyboard_check_pressed(ord('W'))){
                     show_debug_message("YOU HAVE COMPLETED PART OF THE RITUAL")
                     phy_position_y -= 1
+                    health -= 1
+                    if(health &lt;= 0){
+                        instance_destroy()
+                    }
+                    show_debug_message(health)
                     ritual_happening = false
                 }
             }
@@ -85,6 +145,11 @@ ritual_happening = false
                 if(keyboard_check_pressed(ord('E'))){
                     show_debug_message("YOU HAVE COMPLETED PART OF THE RITUAL")
                     phy_position_y -= 1
+                    health -= 1
+                    if(health &lt;= 0){
+                        instance_destroy()
+                    }
+                    show_debug_message(health)
                     ritual_happening = false
                 }
             }
