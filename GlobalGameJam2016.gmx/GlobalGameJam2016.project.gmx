@@ -50,7 +50,8 @@
       <sprite>sprites\spr_danceThriller</sprite>
       <sprite>sprites\spr_danceWorm</sprite>
       <sprite>sprites\spr_reveal</sprite>
-      <sprite>sprites\sprite80</sprite>
+      <sprite>sprites\spr_eat</sprite>
+      <sprite>sprites\spr_heart</sprite>
     </sprites>
     <sprites name="player_1">
       <sprite>sprites\spr_playerRun_1</sprite>
@@ -147,6 +148,11 @@
     </scripts>
     <script>scripts\src_createEggShell.gml</script>
     <script>scripts\src_createEggShells.gml</script>
+    <script>scripts\src_createBloodSplatter.gml</script>
+    <script>scripts\src_createHeartStream.gml</script>
+    <script>scripts\src_streamHeart.gml</script>
+    <script>scripts\src_streamHeartsNow.gml</script>
+    <script>scripts\src_fadeOut.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -164,12 +170,16 @@
       <object>objects\obj_eggBlood1</object>
       <object>objects\obj_eggBlood2</object>
       <object>objects\obj_danceHint</object>
+      <object>objects\obj_reveal</object>
+      <object>objects\obj_eat</object>
+      <object>objects\obj_heart</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
       <object>objects\obj_playerDead</object>
       <object>objects\obj_knifeSafe</object>
       <object>objects\obj_knifeLethal</object>
+      <object>objects\obj_knifeDead</object>
       <object>objects\obj_player_0</object>
       <object>objects\obj_player_1</object>
       <object>objects\obj_player_2</object>
@@ -178,7 +188,6 @@
       <object>objects\obj_playerDead_1</object>
       <object>objects\obj_playerDead_2</object>
       <object>objects\obj_playerDead_3</object>
-      <object>objects\obj_knifeDead</object>
     </objects>
     <objects name="system">
       <object>objects\obj_controllerListener</object>
