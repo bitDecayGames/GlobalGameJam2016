@@ -124,6 +124,9 @@
     <background>background\bk_story_2</background>
     <background>background\tiles_sand</background>
     <background>background\tiles_sand_back</background>
+    <background>background\bk_jungle_1</background>
+    <background>background\bk_jungle_2</background>
+    <background>background\bk_jungle_3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
