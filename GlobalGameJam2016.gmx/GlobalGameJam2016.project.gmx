@@ -35,10 +35,15 @@
       <sprite>sprites\spr_playerDanceThriller_0</sprite>
       <sprite>sprites\spr_playerDanceWorm_0</sprite>
     </sprites>
-    <sprite>sprites\spr_excalibur</sprite>
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
       <sprite>sprites\spr_ggjsplash</sprite>
+    </sprites>
+    <sprites name="egg">
+      <sprite>sprites\spr_egg</sprite>
+      <sprite>sprites\spr_shell</sprite>
+      <sprite>sprites\spr_eggBlood1</sprite>
+      <sprite>sprites\spr_eggBlood2</sprite>
     </sprites>
     <sprites name="player_1">
       <sprite>sprites\spr_playerRun_1</sprite>
@@ -68,6 +73,7 @@
     <script>scripts\script_centerX.gml</script>
     <script>scripts\src_controllerRegisterer.gml</script>
     <script>scripts\src_playerControl.gml</script>
+    <script>scripts\src_playerKeyboard.gml</script>
     <script>scripts\scr_createPlayer.gml</script>
     <script>scripts\src_onPlayerInit.gml</script>
     <script>scripts\src_initializeGlobals.gml</script>
@@ -85,6 +91,7 @@
     <scripts name="level_select">
       <script>scripts\src_random_level.gml</script>
     </scripts>
+    <script>scripts\src_playerOnStep.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="main_menu">
@@ -95,6 +102,13 @@
     <objects name="credits">
       <object>objects\obj_control_credits</object>
       <object>objects\obj_button_credits</object>
+    </objects>
+    <object>objects\obj_bitdecaysplash</object>
+    <objects name="egg">
+      <object>objects\obj_shell</object>
+      <object>objects\obj_egg</object>
+      <object>objects\obj_eggBlood1</object>
+      <object>objects\obj_eggBlood2</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
