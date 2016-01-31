@@ -18,6 +18,7 @@
     <sprite>sprites\spr_physicsRamp</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_knife</sprite>
+    <sprite>sprites\spr_excalibur</sprite>
     <sprite>sprites\spr_spawnPoint</sprite>
     <sprites name="player_0">
       <sprite>sprites\spr_playerRun_0</sprite>
@@ -34,8 +35,8 @@
       <sprite>sprites\spr_playerDanceTwerk_0</sprite>
       <sprite>sprites\spr_playerDanceThriller_0</sprite>
       <sprite>sprites\spr_playerDanceWorm_0</sprite>
+      <sprite>sprites\spr_playerSpawn_0</sprite>
     </sprites>
-    <sprite>sprites\spr_excalibur</sprite>
     <sprites name="splash">
       <sprite>sprites\spr_bitdecaysplash</sprite>
     </sprites>
@@ -54,6 +55,7 @@
       <sprite>sprites\spr_playerDanceTwerk_1</sprite>
       <sprite>sprites\spr_playerDanceThriller_1</sprite>
       <sprite>sprites\spr_playerDanceWorm_1</sprite>
+      <sprite>sprites\spr_playerSpawn_1</sprite>
     </sprites>
     <sprites name="level_select">
       <sprite>sprites\spr_level_select_btn</sprite>
