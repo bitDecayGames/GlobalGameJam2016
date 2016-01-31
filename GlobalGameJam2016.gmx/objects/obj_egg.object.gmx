@@ -162,7 +162,7 @@ physics_apply_impulse(406, 118, 310, -300)
             <string>coolingDown = false
 
 self.my_dancer = instance_place(x, y, obj_player)
-if (self.my_dancer != undefined){
+if (self.my_dancer){
     self.my_dancer.hasControl = false
 }
 </string>
@@ -187,18 +187,20 @@ if (self.my_dancer != undefined){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, obj_player)) {
+            <string>if (place_meeting(x, y, obj_player) &amp;&amp; !coolingDown) {
     if(my_dancer != undefined){
         if(instance_place(x, y, obj_player) == my_dancer){
             if(!ritual_happening){
                 random_dance_ritual = ceil(random(current_time) % 3)
                 ritual_happening = true
+                src_createHints()
             }
             
             if(random_dance_ritual == my_dancer.dancing){
                 health -= (1 / room_speed)
                 if (health &lt; 0) health = 0
-                image_index = maxHealth - floor(health);
+                image_index = maxHealth - ceil(health);
+                my_dancer.phy_position_x = x;
             } else if (my_dancer.hasControl &amp;&amp; my_dancer.dancing == -1){
                 ritual_happening = false
                 coolingDown = true;
@@ -208,7 +210,6 @@ if (self.my_dancer != undefined){
             if(health &lt;= 0){
                 instance_destroy();
             }
-            show_debug_message(health);
         } 
     }
 }

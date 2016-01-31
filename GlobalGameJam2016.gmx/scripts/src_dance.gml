@@ -1,4 +1,4 @@
-show_debug_message("Dance mother fucker!");
+
 if (dancing == -1){
     dancing = argument0;
     var dancingTime = 2;
