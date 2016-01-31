@@ -113,6 +113,9 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\tiles_stone</background>
+    <background>background\tiles_decoration_0</background>
+    <background>background\tiles_stone_back</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
