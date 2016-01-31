@@ -144,7 +144,7 @@ coolDownTimer = room_speed * 3
           <argument>
             <kind>1</kind>
             <string>hasControl = false
-gameOver = true
+global.gameOver = true
 </string>
           </argument>
         </arguments>

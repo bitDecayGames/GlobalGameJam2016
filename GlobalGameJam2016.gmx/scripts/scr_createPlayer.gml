@@ -1,3 +1,8 @@
+if (global.gameOver) {
+    return 0
+}
+
+
 var spawnX = x
 var spawnY = y
 
