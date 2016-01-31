@@ -13,6 +13,7 @@
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_credits</sprite>
       <sprite>sprites\spr_back</sprite>
+      <sprite>sprites\spr_title</sprite>
     </sprites>
     <sprite>sprites\spr_physicsBlock</sprite>
     <sprite>sprites\spr_physicsRamp</sprite>
