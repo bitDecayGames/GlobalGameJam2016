@@ -19,12 +19,6 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_knife</sprite>
     <sprite>sprites\spr_spawnPoint</sprite>
-    <sprites name="htme_demo">
-      <sprite>sprites\htme_spr_wall</sprite>
-      <sprite>sprites\htme_spr_player</sprite>
-      <sprite>sprites\htme_spr_door</sprite>
-      <sprite>sprites\htme_logo</sprite>
-    </sprites>
     <sprites name="player_0">
       <sprite>sprites\spr_playerRun_0</sprite>
       <sprite>sprites\spr_playerLeftThrow_0</sprite>
@@ -85,37 +79,10 @@
       <object>objects\obj_control_main_menu</object>
       <object>objects\obj_start</object>
       <object>objects\obj_credits</object>
-      <object>objects\obj_startServer</object>
-      <object>objects\obj_startClient</object>
     </objects>
     <objects name="credits">
       <object>objects\obj_control_credits</object>
       <object>objects\obj_button_credits</object>
-    </objects>
-    <objects name="htme_demo">
-      <objects name="menu">
-        <object>objects\htme_obj_waitforclient</object>
-        <object>objects\htme_obj_menu</object>
-      </objects>
-      <objects name="game">
-        <object>objects\htme_obj_wall</object>
-        <object>objects\htme_obj_player</object>
-        <object>objects\htme_obj_time</object>
-        <object>objects\htme_obj_playerlist</object>
-        <object>objects\htme_obj_door</object>
-        <object>objects\htme_obj_network_control</object>
-        <object>objects\htme_obj_chat</object>
-      </objects>
-      <object>objects\htme_obj_lanlobbydemo</object>
-    </objects>
-    <objects name="htme">
-      <object>objects\obj_htme</object>
-    </objects>
-    <objects name="udphp_demo">
-      <object>objects\obj_udphphtme_lobby</object>
-    </objects>
-    <objects name="networking">
-      <object>objects\obj_connecting</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
@@ -141,10 +108,10 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
-    <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_physicsTest</room>
     <room>rooms\rm_credits</room>
+    <room>rooms\rm_splash</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

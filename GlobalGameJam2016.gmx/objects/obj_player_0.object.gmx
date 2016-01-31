@@ -77,7 +77,7 @@ playerDanceTwerk = spr_playerDanceTwerk_0
 playerDanceThriller = spr_playerDanceThriller_0
 playerDanceWorm = spr_playerDanceWorm_0
 
-playerDead = obj_playerDead
+playerDead = obj_playerDead_0
 </string>
           </argument>
         </arguments>

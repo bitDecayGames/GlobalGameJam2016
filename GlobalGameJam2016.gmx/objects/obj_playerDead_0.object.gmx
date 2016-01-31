@@ -30,6 +30,8 @@ playerDeathBackFall = spr_playerDeathBackFall_0
 playerDeathBackStop = spr_playerDeathBackStop_0
 playerDeathFrontFall = spr_playerDeathFrontFall_0
 playerDeathFrontStop = spr_playerDeathFrontStop_0
+
+phy_fixed_rotation = true
 </string>
           </argument>
         </arguments>
