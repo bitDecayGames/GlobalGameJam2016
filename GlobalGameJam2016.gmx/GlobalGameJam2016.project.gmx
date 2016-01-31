@@ -165,6 +165,7 @@
     <background>background\bk_jungle_1</background>
     <background>background\bk_jungle_2</background>
     <background>background\bk_jungle_3</background>
+    <background>background\bk_scoreScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -307,6 +308,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
+    <rooms name="score_screen">
+      <room>rooms\rm_score_screen</room>
+    </rooms>
     <room>rooms\rm_splash</room>
     <room>rooms\rm_story</room>
     <room>rooms\rm_menu</room>
@@ -319,9 +323,6 @@
       <room>rooms\rm_level_3</room>
       <room>rooms\rm_level_2</room>
       <room>rooms\rm_level_4</room>
-    </rooms>
-    <rooms name="score_screen">
-      <room>rooms\rm_score_screen</room>
     </rooms>
     <room>rooms\rm_controlScreen</room>
   </rooms>
