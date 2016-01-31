@@ -13,6 +13,7 @@
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_credits</sprite>
       <sprite>sprites\spr_back</sprite>
+      <sprite>sprites\spr_controlsSFfont</sprite>
     </sprites>
     <sprite>sprites\spr_physicsBlock</sprite>
     <sprite>sprites\spr_physicsRamp</sprite>
@@ -104,6 +105,10 @@
       <sprite>sprites\spr_playerDanceWorm_3</sprite>
       <sprite>sprites\spr_playerSpawn_3</sprite>
     </sprites>
+    <sprites name="control_screen">
+      <sprite>sprites\spr_controls</sprite>
+      <sprite>sprites\spr_controlsBack</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -153,6 +158,7 @@
       <object>objects\obj_control_main_menu</object>
       <object>objects\obj_start</object>
       <object>objects\obj_credits</object>
+      <object>objects\obj_controlsMainMenu</object>
     </objects>
     <objects name="credits">
       <object>objects\obj_control_credits</object>
@@ -202,6 +208,13 @@
     <objects name="score_screen">
       <object>objects\obj_score_screen</object>
     </objects>
+    <objects name="control_screen">
+      <object>objects\obj_danceTwerk</object>
+      <object>objects\obj_danceThriller</object>
+      <object>objects\obj_danceWorm</object>
+      <object>objects\obj_back</object>
+      <object>objects\obj_controls</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initRoom</room>
@@ -219,6 +232,7 @@
       <room>rooms\rm_score_screen</room>
     </rooms>
     <room>rooms\rm_</room>
+    <room>rooms\rm_controlScreen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
