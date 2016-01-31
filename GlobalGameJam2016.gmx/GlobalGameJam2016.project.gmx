@@ -7,6 +7,18 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_introMusic</sound>
+    <sound>sound\snd_crush</sound>
+    <sound>sound\snd_death_1</sound>
+    <sound>sound\snd_death_2</sound>
+    <sound>sound\snd_death_3</sound>
+    <sound>sound\snd_egg_crack_1</sound>
+    <sound>sound\snd_egg_crack_2</sound>
+    <sound>sound\snd_egg_crack_3</sound>
+    <sound>sound\snd_jump_1</sound>
+    <sound>sound\snd_jump_2</sound>
+    <sound>sound\snd_knife_drop</sound>
+    <sound>sound\snd_knife_on_kinfe</sound>
+    <sound>sound\snd_knife_throw</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="main_menu">
