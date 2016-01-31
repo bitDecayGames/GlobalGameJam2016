@@ -37,6 +37,7 @@ for(i=ds_map_find_first(global.availablePads); count&lt;ds_map_size(global.avail
         show_debug_message("Claiming pad" + string(i))
         spawnControlPad = i             // set our pad
         global.claimedPads[? i] = true  // let the world know it is ours
+        scr_createPlayer()
         return 0
     }
     count += 1
